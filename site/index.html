@@ -1,0 +1,344 @@
+<title>Rune Kit Reference</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a viewport-locked reference. Header, a component list pane, a specimen pane.
+   Ground is pale granite, the accent is the red ochre once painted into carved runes. */
+:root {
+  --stone: #e7e9e6; --face: #f2f3f0; --sunk: #dcdfdb;
+  --ink: #1b2022; --ink2: #465055; --ink3: #5d676b;
+  --line: rgba(27, 32, 34, .15); --line2: rgba(27, 32, 34, .28);
+  --ochre: #9e2f1c; --ochre-wash: rgba(158, 47, 28, .09);
+  --moss: #3a6636; --slate: #2a587a;
+  --sans: "Schibsted Grotesk", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --r: 3px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --stone: #131618; --face: #1a1e21; --sunk: #0e1012;
+  --ink: #e6e9e7; --ink2: #aab3b5; --ink3: #879194;
+  --line: rgba(230, 233, 231, .13); --line2: rgba(230, 233, 231, .26);
+  --ochre: #ec7c60; --ochre-wash: rgba(236, 124, 96, .12);
+  --moss: #9cc790; --slate: #8fbcd9; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --stone: #131618; --face: #1a1e21; --sunk: #0e1012;
+  --ink: #e6e9e7; --ink2: #aab3b5; --ink3: #879194;
+  --line: rgba(230, 233, 231, .13); --line2: rgba(230, 233, 231, .26);
+  --ochre: #ec7c60; --ochre-wash: rgba(236, 124, 96, .12);
+  --moss: #9cc790; --slate: #8fbcd9; color-scheme: dark }
+
+html, body { height: 100%; }
+body { background: var(--stone); color: var(--ink); font: 15px/1.5 var(--sans); }
+* { box-sizing: border-box; }
+a { color: inherit; text-decoration-color: var(--line2); text-underline-offset: 3px; }
+a:hover { text-decoration-color: var(--ochre); }
+:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; border-radius: var(--r); }
+code, pre, .mono { font-family: var(--mono); }
+code { font-size: .88em; background: var(--sunk); padding: 1px 5px; border-radius: var(--r); overflow-wrap: anywhere; }
+button, input, select { font: inherit; color: inherit; }
+
+.app { display: flex; flex-direction: column; min-height: 100%; }
+.bar { flex: none; display: flex; align-items: center; gap: 12px 18px; flex-wrap: wrap;
+  padding-block: 10px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  border-bottom: 1px solid var(--line); background: var(--stone); }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; letter-spacing: -.01em; }
+.brand svg { flex: none; }
+.unofficial { font: 500 11px/1 var(--mono); color: var(--ochre); border: 1px solid currentColor; padding: 4px 6px; border-radius: 99px; }
+.search { flex: 1 1 180px; max-width: 320px; position: relative; }
+.search input { width: 100%; height: 34px; padding: 0 10px 0 32px; background: var(--face); border: 1px solid var(--line2); border-radius: var(--r); }
+.search svg { position: absolute; left: 10px; top: 10px; color: var(--ink3); }
+.jump { display: none; height: 34px; flex: 1 1 160px; background: var(--face); border: 1px solid var(--line2); border-radius: var(--r); padding: 0 8px; }
+.toggles { display: flex; gap: 14px; margin-left: auto; flex-wrap: wrap; align-items: center; }
+.seg { display: inline-flex; border: 1px solid var(--line2); border-radius: var(--r); overflow: hidden; }
+.seg button { border: 0; background: transparent; padding: 6px 10px; font-size: 13px; cursor: pointer; color: var(--ink2); min-height: 32px; }
+.seg button + button { border-left: 1px solid var(--line2); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--stone); }
+.seg-label { font-size: 12px; color: var(--ink3); margin-right: 6px; }
+
+.body { flex: 1; display: grid; grid-template-columns: 250px minmax(0, 1fr); min-height: 0; }
+.nav { border-right: 1px solid var(--line); overflow-y: auto; padding: 14px 0 40px; min-height: 0; }
+.nav h2 { font: 500 11px/1 var(--mono); color: var(--ink3); text-transform: uppercase; letter-spacing: .08em; margin: 18px 0 6px; padding: 0 16px; }
+.nav a { display: flex; justify-content: space-between; gap: 8px; padding: 5px 16px; text-decoration: none; color: var(--ink2); font-size: 14px; }
+.nav a:hover { color: var(--ink); background: var(--ochre-wash); }
+.nav a[aria-current="page"] { color: var(--ochre); font-weight: 600; background: var(--ochre-wash); }
+.nav a span { font: 400 11px/1.9 var(--mono); color: var(--ink3); }
+.nav .none { padding: 12px 16px; color: var(--ink3); font-size: 13px; }
+.main { overflow-y: auto; min-height: 0; min-width: 0; }
+.page { max-width: 1040px; padding-block: 28px 80px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); margin-left: clamp(0px, 3vw, 40px); }
+
+@media (min-width: 861px) { body { overflow: hidden; } .app { height: 100%; } }
+@media (max-width: 860px) {
+  .body { display: block; } .nav { display: none; } .jump { display: block; } .search { display: none; }
+  .toggles { margin-left: 0; width: 100%; } .page { margin-left: 0; }
+}
+
+.eyebrow { font: 500 11px/1 var(--mono); color: var(--ochre); text-transform: uppercase; letter-spacing: .08em; }
+h1 { font: 700 clamp(30px, 5vw, 46px)/1.05 var(--mono); letter-spacing: -.03em; margin: 10px 0 12px; text-wrap: balance; overflow-wrap: anywhere; }
+h1.plain { font-family: var(--sans); letter-spacing: -.025em; }
+.lede { font-size: 17px; color: var(--ink2); max-width: 64ch; margin: 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 16px; font-size: 13px; color: var(--ink3); align-items: center; }
+.meta .chip { font: 500 12px/1 var(--mono); border: 1px solid var(--line2); padding: 5px 7px; border-radius: 99px; color: var(--ink2); }
+h2.sec { font: 600 13px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--ink2); margin: 52px 0 6px; padding-bottom: 10px; border-bottom: 1px solid var(--line2); display: flex; justify-content: space-between; gap: 12px; }
+h2.sec span { color: var(--ink3); font-weight: 400; }
+p { max-width: 68ch; }
+
+/* A render: the real component on its own plate, with corner ticks like a specimen sheet. */
+.scene { margin-top: 30px; }
+.scene-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin-bottom: 10px; }
+.scene-head h3 { font: 600 17px/1.2 var(--sans); margin: 0; }
+.scene-head .id { font: 400 12px/1.4 var(--mono); color: var(--ink3); overflow-wrap: anywhere; }
+.plate { position: relative; padding: 9px; width: fit-content; max-width: 100%; }
+.plate::before, .plate::after { content: ""; position: absolute; width: 9px; height: 9px; border: solid var(--ochre); }
+.plate::before { left: 0; top: 0; border-width: 1.5px 0 0 1.5px; }
+.plate::after { right: 0; bottom: 0; border-width: 0 1.5px 1.5px 0; }
+.plate img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: var(--r); background: var(--sunk); }
+.noshot { border: 1px dashed var(--line2); border-radius: var(--r); padding: 18px; color: var(--ink3); font-size: 14px; max-width: 60ch; }
+details.src { margin-top: 10px; }
+details.src summary { cursor: pointer; font-size: 13px; color: var(--ink2); width: fit-content; padding: 6px 0; }
+details.src summary:hover { color: var(--ochre); }
+.codewrap { position: relative; }
+pre { margin: 6px 0 0; background: var(--sunk); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 16px; overflow-x: auto; font-size: 12.5px; line-height: 1.6; tab-size: 4; max-height: 520px; }
+.copy { position: absolute; right: 8px; top: 8px; font-size: 12px; border: 1px solid var(--line2); background: var(--face); border-radius: var(--r); padding: 4px 8px; cursor: pointer; }
+.k { color: var(--ochre); } .s { color: var(--moss); } .t { color: var(--slate); } .c { color: var(--ink3); font-style: italic; } .n { color: var(--slate); }
+
+.type { margin-top: 30px; }
+.type-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.type-head h3 { font: 700 19px/1.2 var(--mono); margin: 0; letter-spacing: -.02em; }
+.type-head .kind { font: 400 12px/1 var(--mono); color: var(--ink3); }
+.type-head a { font-size: 12px; color: var(--ink3); margin-left: auto; }
+.doc { color: var(--ink2); font-size: 14.5px; margin: 8px 0 0; max-width: 72ch; }
+.variants { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; padding: 0; list-style: none; }
+.variants li { font: 500 12.5px/1 var(--mono); padding: 6px 8px; border: 1px solid var(--line2); border-radius: var(--r); background: var(--face); }
+.methods { margin: 12px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.methods li { display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: 2px 16px; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.methods .name { font: 600 13px/1.5 var(--mono); color: var(--ochre); overflow-wrap: anywhere; }
+.methods .sig { font: 400 12.5px/1.5 var(--mono); color: var(--ink2); overflow-wrap: anywhere; }
+.methods .mdoc { grid-column: 2; font-size: 13.5px; color: var(--ink2); }
+@media (max-width: 560px) { .methods li { grid-template-columns: 1fr; } .methods .mdoc { grid-column: 1; } }
+
+/* Home */
+.flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 26px 0 0; border: 1px solid var(--line2); border-radius: var(--r); background: var(--face); }
+.flow div { padding: 14px 16px; border-left: 1px solid var(--line); position: relative; min-width: 0; }
+.flow div:first-child { border-left: 0; }
+.flow b { display: block; font: 700 14px/1.3 var(--mono); overflow-wrap: anywhere; }
+.flow small { display: block; color: var(--ink2); font-size: 13px; margin-top: 4px; }
+.flow i { font: 500 11px/1 var(--mono); color: var(--ochre); font-style: normal; display: block; margin-bottom: 8px; }
+@media (max-width: 700px) { .flow { grid-template-columns: 1fr 1fr; } .flow div:nth-child(3) { border-left: 0; } .flow div:nth-child(n+3) { border-top: 1px solid var(--line); } }
+.rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px 32px; margin-top: 18px; }
+.rules h4 { font: 600 15px/1.3 var(--sans); margin: 0 0 4px; }
+.rules p { margin: 0; font-size: 14px; color: var(--ink2); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; margin-top: 16px; }
+.tile { display: flex; flex-direction: column; text-decoration: none; border: 1px solid var(--line); border-radius: var(--r); background: var(--face); overflow: hidden; }
+.tile:hover { border-color: var(--ochre); }
+.tile .thumb { height: 118px; background: var(--sunk); border-bottom: 1px solid var(--line); overflow: hidden; }
+.tile img { width: 100%; height: 100%; object-fit: cover; object-position: left top; display: block; }
+img:not([src]) { visibility: hidden; }
+.tile .thumb.empty { display: grid; place-items: center; font: 500 12px var(--mono); color: var(--ink3); }
+.tile b { font: 600 14px/1.3 var(--mono); padding: 10px 12px 2px; overflow-wrap: anywhere; }
+.tile small { padding: 0 12px 12px; color: var(--ink3); font-size: 12px; }
+.foot { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink3); max-width: 76ch; }
+.loading { padding: 40px 0; color: var(--ink3); }
+</style>
+
+<div class="app">
+  <header class="bar">
+    <a class="brand" href="#" id="home-link" aria-label="Rune Kit Reference, home">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 6V1h5M21 16v5h-5" stroke="var(--ochre)"/><rect x="5" y="5" width="12" height="12" rx="1"/><path d="M8.5 9h5M8.5 12.5h3"/></svg>
+      Rune Kit Reference
+    </a>
+    <span class="unofficial">unofficial</span>
+    <label class="search"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="6" cy="6" r="4.2"/><path d="M9.2 9.2 13 13"/></svg>
+      <input id="q" type="search" placeholder="Find a component or type" aria-label="Find a component or type" autocomplete="off"></label>
+    <select class="jump" id="jump" aria-label="Go to component"></select>
+    <div class="toggles">
+      <span><span class="seg-label">Renders</span><span class="seg" id="mode"><button type="button" data-v="light">Light</button><button type="button" data-v="dark">Dark</button></span></span>
+      <span><span class="seg-label">Theme</span><span class="seg" id="kit"><button type="button" data-v="opencode">OpenCode</button><button type="button" data-v="neutral">Neutral</button></span></span>
+    </div>
+  </header>
+  <div class="body">
+    <nav class="nav" id="nav" aria-label="Components"></nav>
+    <main class="main" id="main"><div class="page" id="page"><p class="loading">Loading the component catalog…</p></div></main>
+  </div>
+</div>
+
+<script>
+(() => {
+const REPO = "https://github.com/anomalyco/rune";
+const $ = (id) => document.getElementById(id);
+const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch {} } };
+const pageDark = () => { const t = document.documentElement.dataset.theme; return t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+let DATA = null, mode = store.get("mode") || (pageDark() ? "dark" : "light"), kit = store.get("kit") || "opencode";
+
+const KW = new Set("as break const continue crate else enum false fn for if impl in let loop match mod move mut pub ref return self Self static struct super trait true type unsafe use where while dyn".split(" "));
+function rust(src) {
+  const re = /(\/\/[^\n]*)|("(?:\\.|[^"\\])*")|\b(\d[\d_.]*(?:f32|f64|usize|u8|u32|i32)?)\b|\b([A-Za-z_]\w*)\b/g;
+  let out = "", last = 0, m;
+  while ((m = re.exec(src))) {
+    out += esc(src.slice(last, m.index)); last = re.lastIndex;
+    const t = esc(m[0]);
+    if (m[1]) out += `<span class="c">${t}</span>`;
+    else if (m[2]) out += `<span class="s">${t}</span>`;
+    else if (m[3]) out += `<span class="n">${t}</span>`;
+    else if (KW.has(m[4])) out += `<span class="k">${t}</span>`;
+    else if (/^[A-Z]/.test(m[4])) out += `<span class="t">${t}</span>`;
+    else out += t;
+  }
+  return out + esc(src.slice(last));
+}
+// Rustdoc text: drop fenced examples and link brackets, keep inline code.
+function doc(s) {
+  if (!s) return "";
+  s = s.replace(/```\w*[\s\S]*?```/g, " ").replace(/```[\s\S]*$/, " ");
+  s = esc(s).replace(/\[(`[^`]+`)\]\([^)]*\)/g, "$1").replace(/\[(`[^`]+`)\]/g, "$1");
+  return s.replace(/`([^`]+)`/g, "<code>$1</code>").trim();
+}
+const code = (src) => `<div class="codewrap"><button class="copy" type="button">Copy</button><pre><code style="background:none;padding:0;font-size:inherit">${rust(src)}</code></pre></div>`;
+function shot(scene) {
+  const s = scene.shots || {};
+  return (s[kit] && s[kit][mode]) || (s.opencode && s.opencode[mode]) || (s.opencode && (s.opencode.light || s.opencode.dark)) || null;
+}
+const img = (sh, alt) => `<img data-f="${sh[0]}" width="${sh[1] / 2}" height="${sh[2] / 2}" alt="${esc(alt)}">`;
+// Renders ship as one pack per component (file name -> base64 WebP), fetched when first shown.
+const packs = {};
+const pack = (slug) => packs[slug] || (packs[slug] = fetch(`packs/${slug}.json`).then((r) => r.json()).catch(() => ({})));
+let THUMBS = null;
+function fill(slug) {
+  pack(slug).then((p) => $("page").querySelectorAll("img[data-f]").forEach((el) => { const b = p[el.dataset.f]; if (b && !el.src) el.src = "data:image/webp;base64," + b; }));
+}
+function fillThumbs() {
+  (THUMBS || (THUMBS = fetch("thumbs.json").then((r) => r.json()).catch(() => ({})))).then((t) =>
+    $("page").querySelectorAll("img[data-t]").forEach((el) => { const b = t[el.dataset.t] && (t[el.dataset.t][mode] || t[el.dataset.t].light); if (b) el.src = "data:image/webp;base64," + b; }));
+}
+
+function nav(filter) {
+  const f = (filter || "").trim().toLowerCase();
+  const hit = (c) => !f || (c.name + " " + c.summary + " " + c.types.map((t) => t.name).join(" ")).toLowerCase().includes(f);
+  const cur = location.hash.slice(1);
+  let html = "", group = "", n = 0;
+  for (const c of DATA.components) {
+    if (!hit(c)) continue; n++;
+    if (c.group !== group) { group = c.group; html += `<h2>${group}</h2>`; }
+    html += `<a href="#${c.slug}"${c.slug === cur ? ' aria-current="page"' : ""}>${esc(c.name)}<span>${c.scenes.length || ""}</span></a>`;
+  }
+  $("nav").innerHTML = n ? html : `<p class="none">Nothing matches “${esc(filter)}”. Try a type name such as MenuItem.</p>`;
+}
+function jump() {
+  let html = `<option value="">All components</option>`, group = "";
+  for (const c of DATA.components) {
+    if (c.group !== group) { if (group) html += "</optgroup>"; group = c.group; html += `<optgroup label="${group}">`; }
+    html += `<option value="${c.slug}">${esc(c.name)}</option>`;
+  }
+  $("jump").innerHTML = html + "</optgroup>";
+  $("jump").value = location.hash.slice(1);
+}
+const srcLink = (file) => `${REPO}/blob/${DATA.rev}/crates/rune-kit/src/${file}`;
+
+function home() {
+  const total = DATA.components.reduce((a, c) => a + c.scenes.length, 0);
+  let html = `<div class="eyebrow">rune-kit · unofficial reference</div>
+  <h1 class="plain">Every component in Rune's kit, rendered</h1>
+  <p class="lede">Rune is a GPU-rendered Rust UI framework by Anomaly. Its components live in the <code>rune-kit</code> crate. This page shows ${DATA.components.length} of them across ${total} scenes, drawn by Rune itself, with the source of each scene and the builder methods read from the code.</p>
+  <div class="meta"><span>Pinned to commit <a href="${REPO}/tree/${DATA.rev}"><code>${DATA.rev.slice(0, 7)}</code></a></span><a href="${REPO}">Rune on GitHub</a><a href="${REPO}/blob/${DATA.rev}/crates/rune-kit/README.md">rune-kit README</a></div>
+
+  <h2 class="sec">How a component reaches the screen</h2>
+  <div class="flow" role="img" aria-label="A theme fills a Kit; a builder reads the Kit and builds an element; overlays collect in a layer; root mounts both.">
+    <div><i>1 · theme</i><b>Kit</b><small>A theme crate, <code>Kit::neutral</code> or <code>Kit::from_palette</code> supplies colours, type, radii and motion.</small></div>
+    <div><i>2 · builder</i><b>Button::new("Save")</b><small>Chain variants, sizes and handlers such as <code>.on_press</code>.</small></div>
+    <div><i>3 · build</i><b>.build(&amp;kit)</b><small>Returns a Rune element. Overlays take <code>.build(&amp;kit, &amp;mut layer)</code> and return their trigger.</small></div>
+    <div><i>4 · mount</i><b>rune_kit::root(body, layer)</b><small>Overlay content draws above everything and escapes clipping.</small></div>
+  </div>
+  ${code(`let k = rune_theme_opencode::kit(cx.system_dark());
+let mut layer = Vec::new();          // overlay contents, mounted above everything
+let body = col()
+    .child(Button::new("Save").variant(ButtonVariant::Contrast).on_press(|s: &mut App| s.save()).build(k))
+    .child(Switch::new(s.sync).label("Sync").on_toggle(|s: &mut App| s.sync = !s.sync).build(k))
+    .child(
+        Select::new("model", &MODELS)
+            .current(Some(&s.model))
+            .open(s.open == Some("model"))
+            .on_toggle(|s: &mut App| s.toggle("model"))
+            .on_close(|s: &mut App| s.open = None)
+            .on_choose(|s: &mut App, v: &str, _: &mut Tx| s.model = v.into())
+            .build(k, &mut layer),
+    );
+rune_kit::root(body, layer)          // the view's root`)}
+  <div class="rules">
+    <div><h4>Add it</h4><p>Rune is pre-release and not on crates.io. Depend on the git repo and pin a commit of <code>dev</code>. Markdown and Mermaid sit behind the <code>markdown</code> and <code>mermaid</code> features.</p></div>
+    <div><h4>Handlers go through the builder</h4><p><code>on_press</code>, <code>on_toggle</code>, <code>on_select</code>, <code>on_choose</code> and <code>on_edit</code> take closures over your app state. A disabled component drops them.</p></div>
+    <div><h4>Forced states</h4><p><code>.state(State::Hover | Pressed | Focus | Disabled)</code> pins a look for galleries. At rest the runtime drives hover and press.</p></div>
+    <div><h4>Accessibility</h4><p>Each component reports a role, name, value and states to Rune's accessibility tree. Give every <code>IconButton</code> a <code>.label</code>.</p></div>
+  </div>`;
+  let group = "";
+  for (const c of DATA.components) {
+    if (c.group !== group) { if (group) html += "</div>"; group = c.group; html += `<h2 class="sec">${group}</h2><div class="grid">`; }
+    const first = c.scenes.map(shot).find(Boolean);
+    html += `<a class="tile" href="#${c.slug}"><span class="thumb${first ? "" : " empty"}">${first ? `<img data-t="${c.slug}" alt="">` : "no render"}</span><b>${esc(c.name)}</b><small>${c.scenes.length ? c.scenes.length + (c.scenes.length === 1 ? " scene" : " scenes") : "API only"}</small></a>`;
+  }
+  return html + "</div>" + foot();
+}
+const foot = () => `<p class="foot">Unofficial and not affiliated with Anomaly. Renders, scene source and API text come from <a href="${REPO}">anomalyco/rune</a> at commit ${DATA.rev.slice(0, 7)}, MIT licensed, © Anomaly. Rune is pre-release, so names here can change; check the repo for the current API. Renders were made headlessly with a software GPU, so antialiasing can differ slightly from a real window. “OpenCode” is the theme crate the gallery ships with; “Neutral” is <code>Kit::neutral</code> and covers a sample of scenes.</p>`;
+
+function component(c) {
+  const plain = /\s/.test(c.name);
+  let html = `<div class="eyebrow">${c.group}</div><h1${plain ? ' class="plain"' : ""}>${esc(c.name)}</h1><p class="lede">${esc(c.summary)}</p><div class="meta">`;
+  if (c.types.length) html += `<code>use rune_kit::${c.types.length > 1 ? "{" + c.types.slice(0, 3).map((t) => t.name).join(", ") + (c.types.length > 3 ? ", …" : "") + "}" : c.types[0].name};</code>`;
+  if (c.feature) html += `<span class="chip">feature = "${c.feature}"</span>`;
+  if (c.types[0]) html += `<a href="${srcLink(c.types[0].file)}">Source: ${c.types[0].file}</a>`;
+  html += `</div>`;
+  if (c.scenes.length) {
+    html += `<h2 class="sec">Renders <span>${c.scenes.length}</span></h2>`;
+    c.scenes.forEach((s, i) => {
+      const sh = shot(s);
+      const cmd = s.example ? `cargo run --release -p rune-kit --example ${s.id.replace("example-", "").split("--")[0]}` : `kit-gallery --scene ${s.id} --snap out.png --theme ${mode}`;
+      html += `<section class="scene"><div class="scene-head"><h3>${esc(s.title)}</h3><span class="id">${esc(cmd)}</span></div>`;
+      html += sh ? `<div class="plate">${img(sh, c.name + ": " + s.title)}</div>` : `<div class="noshot">This scene did not render in the batch. Run the command above in a Rune checkout to see it.</div>`;
+      if (s.src) html += `<details class="src"${i === 0 ? " open" : ""}><summary>Scene source (${s.src.split("\n").length} lines)</summary>${code(s.src)}</details>`;
+      html += `</section>`;
+    });
+  } else html += `<h2 class="sec">Renders</h2><div class="noshot" style="margin-top:16px">The gallery has no scene for this yet, so there is nothing to render. The API below is read from the source.</div>`;
+  if (c.types.length) {
+    html += `<h2 class="sec">API <span>${c.types.length} ${c.types.length === 1 ? "type" : "types"}</span></h2>`;
+    for (const t of c.types) {
+      html += `<section class="type"><div class="type-head"><h3>${t.name}</h3><span class="kind">${t.kind}</span><a href="${srcLink(t.file)}">${t.file}</a></div>`;
+      if (t.doc) html += `<p class="doc">${doc(t.doc)}</p>`;
+      if (t.variants.length) html += `<ul class="variants">${t.variants.map((v) => `<li title="${esc(v.doc || "")}">${v.name}</li>`).join("")}</ul>`;
+      if (t.methods.length) html += `<ul class="methods">${t.methods.map((m) => `<li><span class="name">${m.name}</span><span class="sig">${esc(m.sig.replace(/^(const )?fn \w+/, ""))}</span>${m.doc ? `<span class="mdoc">${doc(m.doc)}</span>` : ""}</li>`).join("")}</ul>`;
+      html += `</section>`;
+    }
+  }
+  return html + foot();
+}
+
+function render(keepScroll) {
+  const slug = location.hash.slice(1);
+  const c = DATA.components.find((x) => x.slug === slug);
+  const top = $("main").scrollTop, wtop = scrollY;
+  $("page").innerHTML = c ? component(c) : home();
+  if (c) fill(c.slug); else fillThumbs();
+  if (keepScroll) { $("main").scrollTop = top; scrollTo(0, wtop); } else { $("main").scrollTop = 0; scrollTo(0, 0); }
+  nav($("q").value); $("jump").value = c ? slug : "";
+  const act = $("nav").querySelector('[aria-current="page"]'); if (act && !keepScroll) act.scrollIntoView({ block: "nearest" });
+}
+function seg(id, get, set) {
+  const el = $(id), paint = () => el.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === get()));
+  el.addEventListener("click", (e) => { const b = e.target.closest("button"); if (!b) return; set(b.dataset.v); store.set(id, b.dataset.v); paint(); render(true); });
+  paint();
+}
+seg("mode", () => mode, (v) => (mode = v));
+seg("kit", () => kit, (v) => (kit = v));
+$("q").addEventListener("input", (e) => nav(e.target.value));
+$("q").addEventListener("keydown", (e) => { if (e.key === "Enter") { const a = $("nav").querySelector("a"); if (a) location.hash = a.getAttribute("href"); } });
+$("jump").addEventListener("change", (e) => { location.hash = e.target.value; });
+$("home-link").addEventListener("click", (e) => { e.preventDefault(); if (location.hash) { history.replaceState(null, "", location.pathname + location.search); render(); } });
+addEventListener("hashchange", () => render());
+$("page").addEventListener("click", (e) => {
+  const b = e.target.closest(".copy"); if (!b) return;
+  const pre = b.parentElement.querySelector("pre"), done = () => { b.textContent = "Copied"; setTimeout(() => (b.textContent = "Copy"), 1400); };
+  const select = () => { const r = document.createRange(); r.selectNodeContents(pre); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Selected"; };
+  try { navigator.clipboard.writeText(pre.textContent).then(done, select); } catch { select(); }
+});
+fetch("data.json").then((r) => r.json()).then((d) => { DATA = d; jump(); render(); })
+  .catch(() => { $("page").innerHTML = `<p class="loading">The catalog file did not load. Reload the page to try again.</p>`; });
+})();
+</script>

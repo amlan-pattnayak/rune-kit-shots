@@ -1,0 +1,103 @@
+#!/usr/bin/env python3
+"""Merges the hand-written catalog with api.json, stories.json and the shots manifest into
+site/data.json.   usage: build_site.py <data dir> <shots dir> <site dir>"""
+import json
+import re
+import sys
+from pathlib import Path
+
+DATA, SHOTS, SITE = (Path(p) for p in sys.argv[1:4])
+REV = "0c8a62e777b171f41cd0c99fb66c63d1b386e899"
+
+# (slug, name, group, summary, types, scene-id prefixes, feature)
+C = [
+ ("button", "Button", "Actions", "A text button in ten variants and five control sizes, with an optional icon, a loading look and a label that can roll its changed characters.", ["Button", "ButtonVariant"], ["ui-button--"], None),
+ ("icon-button", "IconButton", "Actions", "A square, icon-only button. Give it a label or help text so screen readers can name it.", ["IconButton", "IconButtonVariant"], ["ui-icon-button--"], None),
+ ("switch", "Switch", "Selection", "An on/off toggle with a label and description, in compact, standard and web looks and five control sizes.", ["Switch"], ["ui-switch--", "rune-switch--"], None),
+ ("checkbox", "Checkbox", "Selection", "A checkbox with a label, a description, an indeterminate state and a custom check icon.", ["Checkbox"], ["ui-checkbox--"], None),
+ ("radio", "RadioGroup", "Selection", "A labelled group of radio items. Arrow keys move between items.", ["RadioGroup", "RadioItem"], ["ui-radio--"], None),
+ ("segmented-control", "SegmentedControl", "Selection", "A row of segments where one is picked, sized to a width or to its labels.", ["SegmentedControl"], ["ui-segmented-control--"], None),
+ ("text-input", "TextInput", "Text entry", "A single-line field with a placeholder, leading icon, copy and clear buttons, secure entry, an invalid state and key interception. TextField is the older labelled field.", ["TextInput", "TextField"], ["ui-text-input--"], None),
+ ("text-area", "TextArea", "Text entry", "A multi-line field with fixed rows or auto-grow between a minimum and maximum.", ["TextArea"], ["ui-textarea--"], None),
+ ("rich-editor", "Rich text editing", "Text entry", "TextInput, TextArea and TextField accept decorations, a rich style and mention pills. This is the rich_editor example from the kit.", [], ["example-rich_editor"], None),
+ ("field", "Field", "Text entry", "Wraps a control with a label, an info mark, and prefix and suffix text.", ["Field"], ["ui-field--"], None),
+ ("select", "Select", "Text entry", "A dropdown of options, flat or grouped, with an inline or field-style trigger. Its list is an overlay.", ["Select", "SelectAppearance"], ["ui-select--", "rune-select--"], None),
+ ("combobox", "Combobox", "Text entry", "A searchable select built from Popover, TextInput and virtual rows. It filters as you type and only lays out mounted rows.", ["Combobox", "ComboboxOption", "ComboboxState", "ComboboxEvent", "ComboboxPhase", "ComboboxEffect"], ["rune-combobox--"], None),
+ ("shortcut-recorder", "ShortcutRecorder", "Text entry", "Click to record a keyboard shortcut. Escape cancels, Backspace clears, and a refused chord shows an error.", ["ShortcutRecorder", "ShortcutRecorderState"], ["example-shortcut_recorder"], None),
+ ("popover", "Popover", "Overlays", "Titled content anchored to a trigger. It flips and shifts to stay inside the window.", ["Popover", "Placement"], ["components-popover--"], None),
+ ("menu", "Menu", "Overlays", "A dropdown menu with icons, shortcuts, badges, descriptions, checkbox and radio items, submenus and a context-menu form.", ["Menu", "MenuItem", "MenuEntry"], ["ui-menu--"], None),
+ ("tooltip", "Tooltip", "Overlays", "A tooltip in compact, standard and large looks, with keybind hints and a title-and-description form.", ["Tooltip", "TooltipAppearance", "TooltipStyle"], ["ui-tooltip--", "rune-text--selectable-help"], None),
+ ("hover-card", "HoverCard", "Overlays", "A rich preview anchored under its trigger, shown on hover.", ["HoverCard"], ["components-hover-card--"], None),
+ ("dialog", "Dialog", "Overlays", "A modal dialog over a scrim. It traps focus and returns it to the opener on close.", ["Dialog"], ["ui-dialog--", "rune-dialog--", "motion-focus-modal"], None),
+ ("toast", "Toast", "Overlays", "A notification with an icon, description and actions. ToastRegion stacks them at the bottom right; ToastStack is the state machine for timers and stacking.", ["Toast", "ToastRegion", "ToastStack", "ToastEntry", "ToastTimer", "ToastStackState", "ToastEvent", "ToastEffect"], ["ui-toast--"], None),
+ ("popup-list", "PopupList", "Overlays", "A popup listbox driven by a field elsewhere, for @-mentions and /-commands. Keyboard focus stays in the field.", ["PopupList", "PopupItem"], ["rune-popup-list--"], None),
+ ("card", "Card", "Display", "A bordered block with a title, description and action, in normal, error, warning, success and info accents.", ["Card"], ["components-card--"], None),
+ ("list", "List", "Display", "A selectable list with groups, search, dividers, an active icon, an add row and an empty message.", ["List", "ListItem"], ["components-list--", "motion-stagger-list"], None),
+ ("accordion", "Accordion", "Display", "Stacked sections that expand and collapse, one or several at a time.", ["Accordion", "AccordionItem"], ["ui-accordion--"], None),
+ ("collapsible", "Collapsible", "Display", "One disclosure: a trigger row that shows or hides its content.", ["Collapsible"], ["components-collapsible--"], None),
+ ("badge", "Badge", "Display", "A small status label in neutral, accent and subtle variants. Divider, a one-point rule, lives beside it.", ["Badge", "BadgeVariant", "Divider"], ["ui-badge--"], None),
+ ("keybind", "Keybind", "Display", "Keycaps for a shortcut, with platform symbols.", ["Keybind", "KeybindVariant"], ["ui-keybind--", "rune-keybind--"], None),
+ ("rolling-text", "RollingText", "Display", "A label that rolls only the characters that changed.", ["RollingText"], ["rune-rolling-text--"], None),
+ ("text", "Text helpers", "Display", "Core Rune text features the kit themes: selectable text with the kit's selection colour, and middle truncation.", [], ["rune-text--truncate-middle"], None),
+ ("spinner", "Spinner", "Feedback", "The activity spinner: a five-by-five dot grid with a head that sweeps round each ring.", ["Spinner"], ["components-spinner--"], None),
+ ("loader", "Loader", "Feedback", "A turning ring for loading that is not agent activity.", ["Loader"], ["ui-loader--"], None),
+ ("progress", "Progress", "Feedback", "A linear bar with an optional label and value. ProgressCircle is a small ring that fills clockwise.", ["Progress", "ProgressCircle"], ["components-progress--"], None),
+ ("scroll-bar", "ScrollBar", "Feedback", "The kit's scroll bar thumb styles for scrolling viewports.", ["ScrollBar", "ScrollBarStyle"], ["rune-scroll-bar--", "rune-scroll-view--"], None),
+ ("table", "Table", "Data", "A virtualised table with sortable, resizable columns, selection and a keyboard cursor.", ["Table", "TableColumn", "Cell", "TableState", "TableStyle", "SortDir"], ["example-table"], None),
+ ("tree", "Tree", "Data", "A virtualised tree. FileTree builds one from file paths, with natural sorting and compact folder chains.", ["Tree", "TreeItem", "TreeStyle", "FileTree", "FileNode"], ["rune-tree--", "example-tree"], None),
+ ("diff", "DiffView", "Data", "A code diff in unified or split layout with syntax highlighting, folding, line selection and annotations.", ["DiffView", "DiffState", "DiffMode", "FileDiff", "FileStatus", "Annotation", "LineRef", "LineRange", "Expand"], ["example-diff"], None),
+ ("icons", "Icons and glyphs", "Data", "The kit's built-in glyphs, the OpenCode theme's icon catalog and the file-type icons the tree uses.", ["Glyphs"], ["ui-icon--", "rune-icon--", "components-file-icon--", "rune-file-icon--", "rune-tree-icon--", "example-glyphs"], None),
+ ("markdown", "Markdown", "Content", "Renders Markdown, including streaming text, tables, code blocks with syntax highlighting, find highlights and selection.", ["Markdown", "MarkdownStyle", "Highlight", "Case", "ImageFrame", "Highlighter", "SyntaxTheme", "Syntax"], ["rune-markdown--basic", "rune-markdown--streaming", "rune-markdown--stream-tail", "rune-markdown--walkthrough", "rune-markdown--lenient", "rune-markdown--table-styles", "rune-markdown--code"], "markdown"),
+ ("mermaid", "Mermaid diagrams", "Content", "Mermaid fences in Markdown draw as native diagrams.", [], ["rune-markdown--diagrams", "rune-markdown--mermaid-"], "mermaid"),
+ ("image-zoom", "ImageZoom", "Content", "A full-window image preview with zoom, pan and a zoom bar. Stage is the in-pane version. The gallery has no scene for it yet.", ["ImageZoom", "Preview", "Stage", "StageZoom"], [], None),
+ ("split-view", "SplitView and Sidebar", "App shell", "The app shell: a sidebar, a main card, an inspector and a toolbar. Page is a full-window screen without side panes.", ["SplitView", "Sidebar", "SidebarSection", "SidebarRow", "SidebarHeader", "SidebarToggle", "SidebarPeek", "PaneState", "PaneMotion", "Toolbar", "Page", "Reorder"], ["example-shell"], None),
+ ("tab-strip", "TabStrip", "App shell", "A strip of tabs that shrink, scroll, reorder by drag and tear out into windows. WindowTitlebar places one in the title bar.", ["TabStrip", "TabItem", "TabOrientation", "TabDensity", "TabOverflow", "TabItemStatus", "TabDragState", "WindowTitlebar"], ["example-tab_strip"], None),
+ ("kit", "Kit and theming", "Foundations", "Every component reads its colours, type, radii, motion and glyphs from a Kit. Use a theme crate, Kit::neutral, or derive one from three colours with Kit::from_palette.", ["Kit", "PaletteSeed", "PaletteFocus", "Palette", "Elevation", "Type", "Motion", "State", "ControlSize"], [], None),
+]
+
+
+def title(sid):
+    tail = sid.split("--", 1)[1] if "--" in sid else sid
+    t = tail.replace("-", " ").replace("_", " ")
+    return t[:1].upper() + t[1:]
+
+
+def main():
+    api = json.loads((DATA / "api.json").read_text())
+    stories = json.loads((DATA / "stories.json").read_text())
+    manifest = json.loads((SHOTS / "manifest.json").read_text()) if (SHOTS / "manifest.json").exists() else []
+    types = {}
+    for f, ts in api.items():
+        for t in ts:
+            types.setdefault(t["name"], {**t, "file": f})
+    shots = {}
+    for m in manifest:
+        if "error" in m:
+            continue
+        kit = "neutral" if m["kit"] == "neutral" else "opencode"
+        shots.setdefault(m["id"], {}).setdefault(kit, {})[m["theme"]] = [m["file"], m["w"], m["h"]]
+    order = list(stories) + sorted(s for s in shots if s.startswith("example-"))
+    used, comps = set(), []
+    for slug, name, group, summary, tnames, prefixes, feature in C:
+        ids = [s for s in order if any(s.startswith(p) for p in prefixes)]
+        if slug == "markdown":
+            ids = [s for s in ids if "mermaid" not in s and "diagrams" not in s]
+        used.update(ids)
+        scenes = []
+        for s in ids:
+            st = stories.get(s)
+            scenes.append({"id": s, "title": title(s), "src": st["src"] if st else None,
+                           "example": s.startswith("example-"), "shots": shots.get(s, {})})
+        comps.append({"slug": slug, "name": name, "group": group, "summary": summary, "feature": feature,
+                      "types": [types[t] for t in tnames if t in types], "scenes": scenes})
+        miss = [t for t in tnames if t not in types]
+        if miss:
+            print("missing types", slug, miss)
+    print("unassigned scenes:", [s for s in order if s not in used])
+    print("scenes without shots:", [s["id"] for c in comps for s in c["scenes"] if not s["shots"]])
+    out = {"rev": REV, "components": comps}
+    (SITE / "data.json").write_text(json.dumps(out, separators=(",", ":")))
+    print(len(comps), "components,", sum(len(c["scenes"]) for c in comps), "scenes,", (SITE / "data.json").stat().st_size // 1024, "KB")
+
+
+main()
