@@ -92,6 +92,14 @@ p { max-width: 68ch; }
 .plate::before { left: 0; top: 0; border-width: 1.5px 0 0 1.5px; }
 .plate::after { right: 0; bottom: 0; border-width: 0 1.5px 1.5px 0; }
 .plate img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: var(--r); background: var(--sunk); }
+.plate video { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: var(--r); background: #0b0c0d; }
+.hero { margin-top: 26px; }
+.hero .plate { width: 100%; max-width: 960px; }
+.hero video { width: 100%; }
+.hero figcaption, .clipnote { font-size: 12.5px; color: var(--ink3); margin-top: 6px; max-width: 72ch; }
+.clips { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 26px 22px; margin-top: 20px; }
+.clips .scene { margin-top: 0; min-width: 0; }
+.clips .plate { width: 100%; } .clips video { width: 100%; }
 .fell { font-size: 12.5px; color: var(--ink3); margin: 6px 0 0; }
 .noshot { border: 1px dashed var(--line2); border-radius: var(--r); padding: 18px; color: var(--ink3); font-size: 14px; max-width: 60ch; }
 details.src { margin-top: 10px; }
@@ -220,7 +228,7 @@ function nav(filter) {
   for (const c of DATA.components) {
     if (!hit(c)) continue; n++;
     if (c.group !== group) { group = c.group; html += `<h2>${group}</h2>`; }
-    html += `<a href="#${c.slug}"${c.slug === cur ? ' aria-current="page"' : ""}>${esc(c.name)}<span>${c.scenes.length || ""}</span></a>`;
+    html += `<a href="#${c.slug}"${c.slug === cur ? ' aria-current="page"' : ""}>${esc(c.name)}<span>${c.scenes.length || (c.clips && c.clips.length) || ""}</span></a>`;
   }
   $("nav").innerHTML = n ? html : `<p class="none">Nothing matches “${esc(filter)}”. Try a type name such as MenuItem.</p>`;
 }
@@ -233,15 +241,24 @@ function jump() {
   $("jump").innerHTML = html + "</optgroup>";
   $("jump").value = location.hash.slice(1);
 }
+const video = (v, auto) => `<video controls muted loop playsinline preload="none" ${auto ? "data-auto" : ""} poster="clips/${v.file.replace(".mp4", ".webp")}" src="clips/${v.file}" width="${v.w}" height="${v.h}" aria-label="${esc(v.title)}"></video>`;
+const clipList = (list) => `<div class="clips">${list.map((v) => `<section class="scene"><div class="scene-head"><h3>${esc(v.title)}</h3><span class="id">${v.dur.toFixed(1)} s</span></div><div class="plate">${video(v, true)}</div>${v.cmd ? `<p class="clipnote mono">${esc(v.cmd)}</p>` : ""}</section>`).join("")}</div>`;
+// Clips play while on screen and pause when scrolled away; with reduced motion they wait for a press.
+const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const watcher = "IntersectionObserver" in window ? new IntersectionObserver((es) => es.forEach((e) => {
+  const v = e.target; if (e.isIntersecting && !still) { const p = v.play(); if (p) p.catch(() => {}); } else v.pause();
+}), { threshold: 0.6 }) : null;
+function watch() { if (watcher) { watcher.disconnect(); $("page").querySelectorAll("video[data-auto]").forEach((v) => watcher.observe(v)); } }
 const srcLink = (file) => `${REPO}/blob/${DATA.rev}/crates/rune-kit/src/${file}`;
 
 function home() {
   const total = DATA.components.reduce((a, c) => a + c.scenes.length, 0);
   let html = `<div class="eyebrow">rune-kit · unofficial reference</div>
   <h1 class="plain">Every component in Rune's kit, rendered</h1>
-  <p class="lede">Rune is a GPU-rendered Rust UI framework by Anomaly. Its components live in the <code>rune-kit</code> crate. This page shows ${DATA.components.length} of them across ${total} scenes, drawn by Rune itself, with the source of each scene and the builder methods read from the code.</p>
+  <p class="lede">Rune is a GPU-rendered Rust UI framework by Anomaly. Its components live in the <code>rune-kit</code> crate. This page shows ${DATA.components.filter((c) => c.group !== "Motion").length} of them across ${total} scenes, drawn by Rune itself, with the source of each scene and the builder methods read from the code.</p>
   <div class="meta"><span>Pinned to commit <a href="${REPO}/tree/${DATA.rev}"><code>${DATA.rev.slice(0, 7)}</code></a></span><a href="${REPO}">Rune on GitHub</a><a href="${REPO}/blob/${DATA.rev}/crates/rune-kit/README.md">rune-kit README</a></div>
 
+  ${DATA.reel ? `<figure class="hero" style="margin-inline:0"><div class="plate">${video(DATA.reel, false)}</div><figcaption>Rune's own showreel from its README (${Math.round(DATA.reel.dur)} s, with sound). The <a href="#showreel">showreel scenes</a>, <a href="#effects-lab">effects lab</a> and <a href="#example-apps">example apps</a> pages have the individual clips, recorded from the repo.</figcaption></figure>` : ""}
   <h2 class="sec">How a component reaches the screen</h2>
   <div class="flow" role="img" aria-label="A theme fills a Kit; a builder reads the Kit and builds an element; overlays collect in a layer; root mounts both.">
     <div><i>1 · theme</i><b>Kit</b><small>A theme crate, <code>Kit::neutral</code> or <code>Kit::from_palette</code> supplies colours, type, radii and motion.</small></div>
@@ -273,12 +290,13 @@ rune_kit::root(body, layer)          // the view's root`)}
   let group = "";
   for (const c of DATA.components) {
     if (c.group !== group) { if (group) html += "</div>"; group = c.group; html += `<h2 class="sec">${group}</h2><div class="grid">`; }
-    const first = c.scenes.map(shot).find(Boolean);
-    html += `<a class="tile" href="#${c.slug}"><span class="thumb${first ? "" : " empty"}">${first ? `<img data-t="${c.slug}" alt="">` : "no render"}</span><b>${esc(c.name)}</b><small>${c.scenes.length ? c.scenes.length + (c.scenes.length === 1 ? " scene" : " scenes") : "API only"}</small></a>`;
+    const first = c.scenes.map(shot).find(Boolean), clip0 = !first && c.clips && c.clips[0];
+    const count = c.scenes.length ? c.scenes.length + (c.scenes.length === 1 ? " scene" : " scenes") : c.clips && c.clips.length ? c.clips.length + " clips" : "API only";
+    html += `<a class="tile" href="#${c.slug}"><span class="thumb${first || clip0 ? "" : " empty"}">${first ? `<img data-t="${c.slug}" alt="">` : clip0 ? `<img src="clips/${clip0.file.replace(".mp4", ".webp")}" alt="" loading="lazy">` : "no render"}</span><b>${esc(c.name)}</b><small>${count}${c.scenes.length && c.clips && c.clips.length ? " · " + c.clips.length + (c.clips.length === 1 ? " clip" : " clips") : ""}</small></a>`;
   }
   return html + "</div>" + foot();
 }
-const foot = () => `<p class="foot">Unofficial and not affiliated with Anomaly. Renders, scene source and API text come from <a href="${REPO}">anomalyco/rune</a> at commit ${DATA.rev.slice(0, 7)}, MIT licensed, © Anomaly. Rune is pre-release, so names here can change; check the repo for the current API. Renders were made headlessly with a software GPU, so antialiasing can differ slightly from a real window. “OpenCode” is the theme crate the gallery ships with; “Neutral” is <code>Kit::neutral</code> and covers a sample of scenes.</p>`;
+const foot = () => `<p class="foot">Unofficial and not affiliated with Anomaly. Renders, scene source and API text come from <a href="${REPO}">anomalyco/rune</a> at commit ${DATA.rev.slice(0, 7)}, MIT licensed, © Anomaly. Rune is pre-release, so names here can change; check the repo for the current API. Renders and clips were made headlessly with a software GPU, so antialiasing can differ slightly from a real window. “OpenCode” is the theme crate the gallery ships with; “Neutral” is <code>Kit::neutral</code> and covers a sample of scenes.</p>`;
 
 function component(c) {
   const plain = /\s/.test(c.name);
@@ -286,7 +304,10 @@ function component(c) {
   if (c.types.length) html += `<code>use rune_kit::${c.types.length > 1 ? "{" + c.types.filter((t) => t.kind !== "fn").slice(0, 3).map((t) => t.name).join(", ") + (c.types.length > 3 ? ", …" : "") + "}" : c.types[0].name};</code>`;
   if (c.feature) html += `<span class="chip">feature = "${c.feature}"</span>`;
   if (c.types[0]) html += `<a href="${srcLink(c.types[0].file)}">Source: ${c.types[0].file}</a>`;
+  if (c.src) html += `<a href="${REPO}/tree/${DATA.rev}/${c.src}">Source: ${c.src}</a>`;
   html += `</div>`;
+  if (c.clips && c.clips.length) html += `<h2 class="sec">In motion <span>${c.clips.length}</span></h2>${clipList(c.clips)}`;
+  if (c.group === "Motion") return html + foot();
   if (c.scenes.length) {
     html += `<h2 class="sec">Renders <span>${c.scenes.length}</span></h2>`;
     c.scenes.forEach((s, i) => {
@@ -319,6 +340,7 @@ function render(keepScroll) {
   const top = $("main").scrollTop, wtop = scrollY;
   $("page").innerHTML = c ? component(c) : home();
   if (c) fill(c.slug); else fillThumbs();
+  watch();
   if (keepScroll) { $("main").scrollTop = top; scrollTo(0, wtop); } else { $("main").scrollTop = 0; scrollTo(0, 0); }
   nav($("q").value); $("jump").value = c ? slug : "overview";
   const act = $("nav").querySelector('[aria-current="page"]'); if (act && !keepScroll) act.scrollIntoView({ block: "nearest" });

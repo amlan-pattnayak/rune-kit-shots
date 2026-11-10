@@ -57,6 +57,23 @@ C = [
 ]
 
 
+# Motion pages: (slug, name, summary, clip group, source path in the Rune repo)
+M = [
+ ("showreel", "Showreel scenes", "The purpose-made scenes behind the video in Rune's README. Each animates itself from the clock, so a headless run records it frame-exact.", "showreel", "examples/showreel"),
+ ("effects-lab", "Effects lab", "rune-light and rune-fx composited live inside Rune's renderer: lights, glow, pulses, electricity, fire and a lens. Some clips replay a scripted pointer.", "lab", "examples/lab"),
+ ("example-apps", "Example apps", "Scripted runs of example apps from the repo: the settings window, a matched-geometry zoom, and the twelve-tile motion bento.", "apps", "examples"),
+]
+# Scripted kit clips shown on their component's page.
+KIT_CLIPS = {"kit-combobox": "combobox", "kit-combobox-animated-filter": "combobox", "kit-help-tooltip": "tooltip",
+             "kit-selectable-text": "text", "kit-motion-focus-modal": "dialog", "kit-motion-stagger-list": "list"}
+
+
+def clip(m):
+    name = m["id"].split("-", 1)[1].replace("-", " ")
+    return {"id": m["id"], "title": name[:1].upper() + name[1:], "file": m["file"], "w": m["w"], "h": m["h"],
+            "dur": m["dur"], "cmd": m.get("cmd", "")}
+
+
 def title(sid):
     tail = sid.split("--", 1)[1] if "--" in sid else sid
     t = tail.replace("-", " ").replace("_", " ")
@@ -81,6 +98,11 @@ def main():
             continue
         kit = "neutral" if m["kit"] == "neutral" else "opencode"
         shots.setdefault(m["id"], {}).setdefault(kit, {})[m["theme"]] = [m["file"], m["w"], m["h"]]
+    cm = json.loads((SITE / "clips/manifest.json").read_text()) if (SITE / "clips/manifest.json").exists() else []
+    bad = [m["id"] for m in cm if "error" in m]
+    if bad:
+        print("clips that failed:", bad)
+    cm = [m for m in cm if "error" not in m]
     order = list(stories) + sorted(s for s in shots if s.startswith("example-"))
     used, comps = set(), []
     for slug, name, group, summary, tnames, prefixes, feature in C:
@@ -93,14 +115,19 @@ def main():
             st = stories.get(s)
             scenes.append({"id": s, "title": title(s), "src": st["src"] if st else None,
                            "example": s.startswith("example-"), "shots": shots.get(s, {})})
-        comps.append({"slug": slug, "name": name, "group": group, "summary": summary, "feature": feature,
+        clips = [clip(m) for m in cm if KIT_CLIPS.get(m["id"]) == slug]
+        comps.append({"slug": slug, "name": name, "group": group, "summary": summary, "feature": feature, "clips": clips,
                       "types": [types[t] for t in tnames if t in types], "scenes": scenes})
         miss = [t for t in tnames if t not in types]
         if miss:
             print("missing types", slug, miss)
     print("unassigned scenes:", [s for s in order if s not in used])
     print("scenes without shots:", [s["id"] for c in comps for s in c["scenes"] if not s["shots"]])
-    out = {"rev": REV, "components": comps}
+    motion = [{"slug": slug, "name": name, "group": "Motion", "summary": summary, "feature": None, "types": [], "scenes": [],
+               "src": src, "clips": [clip(m) for m in cm if m["group"] == g]} for slug, name, summary, g, src in M]
+    motion = [m for m in motion if m["clips"]]
+    reel = next((clip(m) for m in cm if m["id"] == "rune-reel"), None)
+    out = {"rev": REV, "reel": reel, "components": motion + comps}
     (SITE / "data.json").write_text(json.dumps(out, separators=(",", ":")))
     print(len(comps), "components,", sum(len(c["scenes"]) for c in comps), "scenes,", (SITE / "data.json").stat().st_size // 1024, "KB")
 
