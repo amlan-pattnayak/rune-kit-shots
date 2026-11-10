@@ -55,6 +55,18 @@ def parse(path):
             doc = []
             i += 1
             continue
+        m = re.match(r"pub fn (\w+)", l)
+        if m:
+            sig, j = s, i
+            while "{" not in sig and j + 1 < len(lines) and j - i < 8:
+                j += 1
+                sig += " " + lines[j].strip()
+            sig = re.sub(r"\s*(where .*)?\{.*$", "", sig).removeprefix("pub ").strip()
+            types[m.group(1)] = {"kind": "fn", "doc": clean_doc(doc), "variants": [], "methods": [], "sig": sig}
+            order.append(m.group(1))
+            doc = []
+            i += 1
+            continue
         if cur_enum and re.match(r"    [A-Z]\w*", l):
             v = re.match(r"    ([A-Z]\w*)", l).group(1)
             types[cur_enum]["variants"].append({"name": v, "doc": clean_doc(doc)})
@@ -79,6 +91,10 @@ def parse(path):
         doc = []
         i += 1
     return [{"name": n, **types[n]} for n in order], loose
+
+
+def module(rel):
+    return rel.split("/")[0].removesuffix(".rs")
 
 
 def fn_source(text, name):
@@ -112,13 +128,23 @@ def main():
     for p in sorted(KIT.rglob("*.rs")):
         if "test" in p.name:
             continue
-        parsed[str(p.relative_to(KIT))], loose = parse(p)
+        rel = str(p.relative_to(KIT))
+        parsed[rel], loose = parse(p)
         for name, ms in loose.items():
-            methods.setdefault(name, []).extend(ms)
+            methods.setdefault(name, []).append((module(rel), ms))
+    # An impl's methods go to the type of that name in the same module; if the name is defined
+    # in one place only, impls elsewhere in the crate (Kit's, say) join it too.
+    owners = {}
     for rel, ts in parsed.items():
         for t in ts:
-            t["methods"] = methods.get(t["name"], [])
-        ts = [t for t in ts if t["methods"] or t["variants"] or t["doc"]]
+            owners.setdefault(t["name"], []).append(module(rel))
+    for rel, ts in parsed.items():
+        for t in ts:
+            if t["kind"] == "fn":
+                continue
+            unique = len(owners[t["name"]]) == 1
+            t["methods"] = [m for mod, ms in methods.get(t["name"], []) if unique or mod == module(rel) for m in ms]
+        ts = [t for t in ts if t["methods"] or t["variants"] or t["doc"] or t["kind"] == "fn"]
         if ts:
             api[rel] = ts
     (OUT / "api.json").write_text(json.dumps(api, indent=1))
