@@ -1,0 +1,46 @@
+name: Render
+
+on:
+  workflow_dispatch:
+    inputs:
+      rev:
+        description: Rune commit to render
+        default: 0c8a62e777b171f41cd0c99fb66c63d1b386e899
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      RUNE_REV: ${{ inputs.rev || '0c8a62e777b171f41cd0c99fb66c63d1b386e899' }}
+      VK_ICD_FILENAMES: /usr/share/vulkan/icd.d/lvp_icd.json
+      CARGO_PROFILE_RELEASE_DEBUG: 0
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          repository: anomalyco/rune
+          ref: ${{ env.RUNE_REV }}
+          path: rune
+      - run: sudo apt-get update && sudo apt-get install -y libxkbcommon-dev libwayland-dev libxkbcommon-x11-0 mesa-vulkan-drivers python3-pil
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: rune
+          cache-on-failure: true
+      - name: Build
+        working-directory: rune
+        run: |
+          cargo build --release -p kit-gallery
+          cargo build --release -p rune-kit --features markdown,mermaid --example diff --example table --example tree --example shell --example tab_strip --example shortcut_recorder --example rich_editor --example glyphs
+      - name: Render
+        run: python3 scripts/render.py rune shots
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shots
+          path: shots
