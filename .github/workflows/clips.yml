@@ -1,0 +1,45 @@
+name: Clips
+
+on:
+  workflow_dispatch:
+    inputs:
+      rev:
+        description: Rune commit to record
+        default: 0c8a62e777b171f41cd0c99fb66c63d1b386e899
+  push:
+    branches: [main]
+    paths: [scripts/render_video.py, .github/workflows/clips.yml]
+
+permissions:
+  contents: read
+
+jobs:
+  clips:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      RUNE_REV: ${{ inputs.rev || '0c8a62e777b171f41cd0c99fb66c63d1b386e899' }}
+      VK_ICD_FILENAMES: /usr/share/vulkan/icd.d/lvp_icd.json
+      CARGO_PROFILE_RELEASE_DEBUG: 0
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/checkout@v5
+        with:
+          repository: anomalyco/rune
+          ref: ${{ env.RUNE_REV }}
+          path: rune
+      - run: sudo apt-get update && sudo apt-get install -y libxkbcommon-dev libwayland-dev libxkbcommon-x11-0 mesa-vulkan-drivers ffmpeg
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: rune
+          cache-on-failure: true
+      - name: Build
+        working-directory: rune
+        run: cargo build --release -p kit-gallery -p showreel -p lab -p settings -p matched -p cursed-settings -p motion-bento
+      - name: Record
+        run: python3 scripts/render_video.py rune clips
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: clips
+          path: clips

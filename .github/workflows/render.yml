@@ -6,8 +6,6 @@ on:
       rev:
         description: Rune commit to render
         default: 0c8a62e777b171f41cd0c99fb66c63d1b386e899
-  push:
-    branches: [main]
 
 permissions:
   contents: read

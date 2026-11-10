@@ -1,0 +1,3314 @@
+[
+ {
+  "id": "rune-combobox--searchable",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-combobox--searchable.opencode.light.webp",
+  "w": 1440,
+  "h": 665,
+  "clipped": false
+ },
+ {
+  "id": "rune-combobox--searchable",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-combobox--searchable.opencode.dark.webp",
+  "w": 1440,
+  "h": 649,
+  "clipped": false
+ },
+ {
+  "id": "rune-combobox--animated-filter",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-combobox--animated-filter.opencode.light.webp",
+  "w": 1440,
+  "h": 665,
+  "clipped": false
+ },
+ {
+  "id": "rune-combobox--animated-filter",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-combobox--animated-filter.opencode.dark.webp",
+  "w": 1440,
+  "h": 649,
+  "clipped": false
+ },
+ {
+  "id": "ui-dialog--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-dialog--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "ui-dialog--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-dialog--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "motion-focus-modal",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "motion-focus-modal.opencode.light.webp",
+  "w": 1440,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "motion-focus-modal",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "motion-focus-modal.opencode.dark.webp",
+  "w": 1440,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "motion-stagger-list",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "motion-stagger-list.opencode.light.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "motion-stagger-list",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "motion-stagger-list.opencode.dark.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "ui-button--playground",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-button--playground.opencode.light.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "ui-button--playground",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-button--playground.opencode.dark.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "ui-button--variants",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-button--variants.opencode.light.webp",
+  "w": 1440,
+  "h": 216,
+  "clipped": false
+ },
+ {
+  "id": "ui-button--variants",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-button--variants.opencode.dark.webp",
+  "w": 1440,
+  "h": 216,
+  "clipped": false
+ },
+ {
+  "id": "ui-button--sizes",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-button--sizes.opencode.light.webp",
+  "w": 1440,
+  "h": 173,
+  "clipped": false
+ },
+ {
+  "id": "ui-button--sizes",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-button--sizes.opencode.dark.webp",
+  "w": 1440,
+  "h": 173,
+  "clipped": false
+ },
+ {
+  "id": "ui-button--icon",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-button--icon.opencode.light.webp",
+  "w": 1440,
+  "h": 157,
+  "clipped": false
+ },
+ {
+  "id": "ui-button--icon",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-button--icon.opencode.dark.webp",
+  "w": 1440,
+  "h": 157,
+  "clipped": false
+ },
+ {
+  "id": "ui-button--all-states",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-button--all-states.opencode.light.webp",
+  "w": 1440,
+  "h": 1296,
+  "clipped": false
+ },
+ {
+  "id": "ui-button--all-states",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-button--all-states.opencode.dark.webp",
+  "w": 1440,
+  "h": 1296,
+  "clipped": false
+ },
+ {
+  "id": "ui-icon-button--playground",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-icon-button--playground.opencode.light.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "ui-icon-button--playground",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-icon-button--playground.opencode.dark.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "ui-icon-button--variants",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-icon-button--variants.opencode.light.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "ui-icon-button--variants",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-icon-button--variants.opencode.dark.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "ui-icon-button--sizes",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-icon-button--sizes.opencode.light.webp",
+  "w": 1440,
+  "h": 173,
+  "clipped": false
+ },
+ {
+  "id": "ui-icon-button--sizes",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-icon-button--sizes.opencode.dark.webp",
+  "w": 1440,
+  "h": 173,
+  "clipped": false
+ },
+ {
+  "id": "ui-icon-button--all-states",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-icon-button--all-states.opencode.light.webp",
+  "w": 1440,
+  "h": 625,
+  "clipped": false
+ },
+ {
+  "id": "ui-icon-button--all-states",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-icon-button--all-states.opencode.dark.webp",
+  "w": 1440,
+  "h": 625,
+  "clipped": false
+ },
+ {
+  "id": "ui-switch--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-switch--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-switch--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-switch--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-switch--appearances",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-switch--appearances.opencode.light.webp",
+  "w": 1440,
+  "h": 184,
+  "clipped": false
+ },
+ {
+  "id": "ui-switch--appearances",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-switch--appearances.opencode.dark.webp",
+  "w": 1440,
+  "h": 184,
+  "clipped": false
+ },
+ {
+  "id": "ui-switch--states",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-switch--states.opencode.light.webp",
+  "w": 1440,
+  "h": 240,
+  "clipped": false
+ },
+ {
+  "id": "ui-switch--states",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-switch--states.opencode.dark.webp",
+  "w": 1440,
+  "h": 240,
+  "clipped": false
+ },
+ {
+  "id": "ui-switch--hidden-label",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-switch--hidden-label.opencode.light.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-switch--hidden-label",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-switch--hidden-label.opencode.dark.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "rune-switch--web",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-switch--web.opencode.light.webp",
+  "w": 1440,
+  "h": 424,
+  "clipped": false
+ },
+ {
+  "id": "rune-switch--web",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-switch--web.opencode.dark.webp",
+  "w": 1440,
+  "h": 424,
+  "clipped": false
+ },
+ {
+  "id": "ui-checkbox--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-checkbox--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 136,
+  "clipped": false
+ },
+ {
+  "id": "ui-checkbox--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-checkbox--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 136,
+  "clipped": false
+ },
+ {
+  "id": "ui-checkbox--states",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-checkbox--states.opencode.light.webp",
+  "w": 1440,
+  "h": 389,
+  "clipped": false
+ },
+ {
+  "id": "ui-checkbox--states",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-checkbox--states.opencode.dark.webp",
+  "w": 1440,
+  "h": 389,
+  "clipped": false
+ },
+ {
+  "id": "ui-checkbox--custom-icon",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-checkbox--custom-icon.opencode.light.webp",
+  "w": 1440,
+  "h": 136,
+  "clipped": false
+ },
+ {
+  "id": "ui-checkbox--custom-icon",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-checkbox--custom-icon.opencode.dark.webp",
+  "w": 1440,
+  "h": 136,
+  "clipped": false
+ },
+ {
+  "id": "ui-checkbox--hidden-label",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-checkbox--hidden-label.opencode.light.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-checkbox--hidden-label",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-checkbox--hidden-label.opencode.dark.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-radio--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-radio--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 402,
+  "clipped": false
+ },
+ {
+  "id": "ui-radio--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-radio--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 402,
+  "clipped": false
+ },
+ {
+  "id": "ui-radio--controlled",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-radio--controlled.opencode.light.webp",
+  "w": 1440,
+  "h": 363,
+  "clipped": false
+ },
+ {
+  "id": "ui-radio--controlled",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-radio--controlled.opencode.dark.webp",
+  "w": 1440,
+  "h": 363,
+  "clipped": false
+ },
+ {
+  "id": "ui-radio--states",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-radio--states.opencode.light.webp",
+  "w": 1440,
+  "h": 856,
+  "clipped": false
+ },
+ {
+  "id": "ui-radio--states",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-radio--states.opencode.dark.webp",
+  "w": 1440,
+  "h": 856,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--playground",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-text-input--playground.opencode.light.webp",
+  "w": 1440,
+  "h": 157,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--playground",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-text-input--playground.opencode.dark.webp",
+  "w": 1440,
+  "h": 153,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--with-copy-button",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-text-input--with-copy-button.opencode.light.webp",
+  "w": 1440,
+  "h": 157,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--with-copy-button",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-text-input--with-copy-button.opencode.dark.webp",
+  "w": 1440,
+  "h": 153,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--controlled",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-text-input--controlled.opencode.light.webp",
+  "w": 1440,
+  "h": 209,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--controlled",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-text-input--controlled.opencode.dark.webp",
+  "w": 1440,
+  "h": 209,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--appearances",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-text-input--appearances.opencode.light.webp",
+  "w": 1440,
+  "h": 365,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--appearances",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-text-input--appearances.opencode.dark.webp",
+  "w": 1440,
+  "h": 361,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--with-field",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-text-input--with-field.opencode.light.webp",
+  "w": 1440,
+  "h": 502,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--with-field",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-text-input--with-field.opencode.dark.webp",
+  "w": 1440,
+  "h": 502,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--states",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-text-input--states.opencode.light.webp",
+  "w": 1440,
+  "h": 637,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--states",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-text-input--states.opencode.dark.webp",
+  "w": 1440,
+  "h": 633,
+  "clipped": false
+ },
+ {
+  "id": "ui-textarea--playground",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-textarea--playground.opencode.light.webp",
+  "w": 1440,
+  "h": 261,
+  "clipped": false
+ },
+ {
+  "id": "ui-textarea--playground",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-textarea--playground.opencode.dark.webp",
+  "w": 1440,
+  "h": 257,
+  "clipped": false
+ },
+ {
+  "id": "ui-textarea--controlled",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-textarea--controlled.opencode.light.webp",
+  "w": 1440,
+  "h": 313,
+  "clipped": false
+ },
+ {
+  "id": "ui-textarea--controlled",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-textarea--controlled.opencode.dark.webp",
+  "w": 1440,
+  "h": 313,
+  "clipped": false
+ },
+ {
+  "id": "ui-textarea--with-field",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-textarea--with-field.opencode.light.webp",
+  "w": 1440,
+  "h": 710,
+  "clipped": false
+ },
+ {
+  "id": "ui-textarea--with-field",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-textarea--with-field.opencode.dark.webp",
+  "w": 1440,
+  "h": 710,
+  "clipped": false
+ },
+ {
+  "id": "ui-textarea--states",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-textarea--states.opencode.light.webp",
+  "w": 1440,
+  "h": 1061,
+  "clipped": false
+ },
+ {
+  "id": "ui-textarea--states",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-textarea--states.opencode.dark.webp",
+  "w": 1440,
+  "h": 1057,
+  "clipped": false
+ },
+ {
+  "id": "ui-field--text-input-example",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-field--text-input-example.opencode.light.webp",
+  "w": 1440,
+  "h": 274,
+  "clipped": false
+ },
+ {
+  "id": "ui-field--text-input-example",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-field--text-input-example.opencode.dark.webp",
+  "w": 1440,
+  "h": 274,
+  "clipped": false
+ },
+ {
+  "id": "ui-field--text-input-direct-child",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-field--text-input-direct-child.opencode.light.webp",
+  "w": 1440,
+  "h": 274,
+  "clipped": false
+ },
+ {
+  "id": "ui-field--text-input-direct-child",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-field--text-input-direct-child.opencode.dark.webp",
+  "w": 1440,
+  "h": 274,
+  "clipped": false
+ },
+ {
+  "id": "ui-field--textarea-example",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-field--textarea-example.opencode.light.webp",
+  "w": 1440,
+  "h": 378,
+  "clipped": false
+ },
+ {
+  "id": "ui-field--textarea-example",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-field--textarea-example.opencode.dark.webp",
+  "w": 1440,
+  "h": 378,
+  "clipped": false
+ },
+ {
+  "id": "ui-field--invalid",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-field--invalid.opencode.light.webp",
+  "w": 1440,
+  "h": 274,
+  "clipped": false
+ },
+ {
+  "id": "ui-field--invalid",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-field--invalid.opencode.dark.webp",
+  "w": 1440,
+  "h": 274,
+  "clipped": false
+ },
+ {
+  "id": "ui-select--playground",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-select--playground.opencode.light.webp",
+  "w": 1440,
+  "h": 502,
+  "clipped": false
+ },
+ {
+  "id": "ui-select--playground",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-select--playground.opencode.dark.webp",
+  "w": 1440,
+  "h": 496,
+  "clipped": false
+ },
+ {
+  "id": "ui-select--grouped",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-select--grouped.opencode.light.webp",
+  "w": 1440,
+  "h": 602,
+  "clipped": false
+ },
+ {
+  "id": "ui-select--grouped",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-select--grouped.opencode.dark.webp",
+  "w": 1440,
+  "h": 596,
+  "clipped": false
+ },
+ {
+  "id": "ui-select--invalid",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-select--invalid.opencode.light.webp",
+  "w": 1440,
+  "h": 130,
+  "clipped": false
+ },
+ {
+  "id": "ui-select--invalid",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-select--invalid.opencode.dark.webp",
+  "w": 1440,
+  "h": 130,
+  "clipped": false
+ },
+ {
+  "id": "ui-select--disabled",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-select--disabled.opencode.light.webp",
+  "w": 1440,
+  "h": 135,
+  "clipped": false
+ },
+ {
+  "id": "ui-select--disabled",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-select--disabled.opencode.dark.webp",
+  "w": 1440,
+  "h": 135,
+  "clipped": false
+ },
+ {
+  "id": "ui-select--with-field",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-select--with-field.opencode.light.webp",
+  "w": 1440,
+  "h": 266,
+  "clipped": false
+ },
+ {
+  "id": "ui-select--with-field",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-select--with-field.opencode.dark.webp",
+  "w": 1440,
+  "h": 266,
+  "clipped": false
+ },
+ {
+  "id": "rune-select--states",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-select--states.opencode.light.webp",
+  "w": 1440,
+  "h": 1162,
+  "clipped": false
+ },
+ {
+  "id": "rune-select--states",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-select--states.opencode.dark.webp",
+  "w": 1440,
+  "h": 1156,
+  "clipped": false
+ },
+ {
+  "id": "components-popover--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-popover--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 390,
+  "clipped": false
+ },
+ {
+  "id": "components-popover--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-popover--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 374,
+  "clipped": false
+ },
+ {
+  "id": "components-popover--controlled",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-popover--controlled.opencode.light.webp",
+  "w": 1440,
+  "h": 390,
+  "clipped": false
+ },
+ {
+  "id": "components-popover--controlled",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-popover--controlled.opencode.dark.webp",
+  "w": 1440,
+  "h": 374,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-menu--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 440,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-menu--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 434,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--appearances",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-menu--appearances.opencode.light.webp",
+  "w": 1440,
+  "h": 318,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--appearances",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-menu--appearances.opencode.dark.webp",
+  "w": 1440,
+  "h": 312,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--rich",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-menu--rich.opencode.light.webp",
+  "w": 1440,
+  "h": 440,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--rich",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-menu--rich.opencode.dark.webp",
+  "w": 1440,
+  "h": 434,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--with-checkbox",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-menu--with-checkbox.opencode.light.webp",
+  "w": 1440,
+  "h": 374,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--with-checkbox",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-menu--with-checkbox.opencode.dark.webp",
+  "w": 1440,
+  "h": 368,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--with-radio",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-menu--with-radio.opencode.light.webp",
+  "w": 1440,
+  "h": 430,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--with-radio",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-menu--with-radio.opencode.dark.webp",
+  "w": 1440,
+  "h": 424,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--with-submenu",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-menu--with-submenu.opencode.light.webp",
+  "w": 1440,
+  "h": 496,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--with-submenu",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-menu--with-submenu.opencode.dark.webp",
+  "w": 1440,
+  "h": 490,
+  "clipped": false
+ },
+ {
+  "id": "ui-tooltip--simple",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-tooltip--simple.opencode.light.webp",
+  "w": 1440,
+  "h": 398,
+  "clipped": false
+ },
+ {
+  "id": "ui-tooltip--simple",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-tooltip--simple.opencode.dark.webp",
+  "w": 1440,
+  "h": 392,
+  "clipped": false
+ },
+ {
+  "id": "ui-tooltip--with-keybind",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-tooltip--with-keybind.opencode.light.webp",
+  "w": 1440,
+  "h": 402,
+  "clipped": false
+ },
+ {
+  "id": "ui-tooltip--with-keybind",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-tooltip--with-keybind.opencode.dark.webp",
+  "w": 1440,
+  "h": 396,
+  "clipped": false
+ },
+ {
+  "id": "ui-tooltip--path",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-tooltip--path.opencode.light.webp",
+  "w": 1440,
+  "h": 398,
+  "clipped": false
+ },
+ {
+  "id": "ui-tooltip--path",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-tooltip--path.opencode.dark.webp",
+  "w": 1440,
+  "h": 392,
+  "clipped": false
+ },
+ {
+  "id": "ui-tooltip--title-description",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-tooltip--title-description.opencode.light.webp",
+  "w": 1440,
+  "h": 398,
+  "clipped": false
+ },
+ {
+  "id": "ui-tooltip--title-description",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-tooltip--title-description.opencode.dark.webp",
+  "w": 1440,
+  "h": 392,
+  "clipped": false
+ },
+ {
+  "id": "components-hover-card--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-hover-card--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 307,
+  "clipped": false
+ },
+ {
+  "id": "components-hover-card--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-hover-card--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 291,
+  "clipped": false
+ },
+ {
+  "id": "ui-toast--all-examples",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-toast--all-examples.opencode.light.webp",
+  "w": 1440,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "ui-toast--all-examples",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-toast--all-examples.opencode.dark.webp",
+  "w": 1440,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "components-card--normal",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-card--normal.opencode.light.webp",
+  "w": 1440,
+  "h": 285,
+  "clipped": false
+ },
+ {
+  "id": "components-card--normal",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-card--normal.opencode.dark.webp",
+  "w": 1440,
+  "h": 285,
+  "clipped": false
+ },
+ {
+  "id": "components-card--error",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-card--error.opencode.light.webp",
+  "w": 1440,
+  "h": 285,
+  "clipped": false
+ },
+ {
+  "id": "components-card--error",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-card--error.opencode.dark.webp",
+  "w": 1440,
+  "h": 285,
+  "clipped": false
+ },
+ {
+  "id": "components-card--warning",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-card--warning.opencode.light.webp",
+  "w": 1440,
+  "h": 285,
+  "clipped": false
+ },
+ {
+  "id": "components-card--warning",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-card--warning.opencode.dark.webp",
+  "w": 1440,
+  "h": 285,
+  "clipped": false
+ },
+ {
+  "id": "components-card--success",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-card--success.opencode.light.webp",
+  "w": 1440,
+  "h": 285,
+  "clipped": false
+ },
+ {
+  "id": "components-card--success",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-card--success.opencode.dark.webp",
+  "w": 1440,
+  "h": 285,
+  "clipped": false
+ },
+ {
+  "id": "components-card--info",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-card--info.opencode.light.webp",
+  "w": 1440,
+  "h": 285,
+  "clipped": false
+ },
+ {
+  "id": "components-card--info",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-card--info.opencode.dark.webp",
+  "w": 1440,
+  "h": 285,
+  "clipped": false
+ },
+ {
+  "id": "components-list--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-list--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 442,
+  "clipped": false
+ },
+ {
+  "id": "components-list--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-list--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 442,
+  "clipped": false
+ },
+ {
+  "id": "components-list--grouped",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-list--grouped.opencode.light.webp",
+  "w": 1440,
+  "h": 548,
+  "clipped": false
+ },
+ {
+  "id": "components-list--grouped",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-list--grouped.opencode.dark.webp",
+  "w": 1440,
+  "h": 548,
+  "clipped": false
+ },
+ {
+  "id": "components-list--empty",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-list--empty.opencode.light.webp",
+  "w": 1440,
+  "h": 296,
+  "clipped": false
+ },
+ {
+  "id": "components-list--empty",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-list--empty.opencode.dark.webp",
+  "w": 1440,
+  "h": 296,
+  "clipped": false
+ },
+ {
+  "id": "components-list--with-add",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-list--with-add.opencode.light.webp",
+  "w": 1440,
+  "h": 400,
+  "clipped": false
+ },
+ {
+  "id": "components-list--with-add",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-list--with-add.opencode.dark.webp",
+  "w": 1440,
+  "h": 400,
+  "clipped": false
+ },
+ {
+  "id": "components-list--divider",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-list--divider.opencode.light.webp",
+  "w": 1440,
+  "h": 272,
+  "clipped": false
+ },
+ {
+  "id": "components-list--divider",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-list--divider.opencode.dark.webp",
+  "w": 1440,
+  "h": 272,
+  "clipped": false
+ },
+ {
+  "id": "components-list--active-icon",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-list--active-icon.opencode.light.webp",
+  "w": 1440,
+  "h": 272,
+  "clipped": false
+ },
+ {
+  "id": "components-list--active-icon",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-list--active-icon.opencode.dark.webp",
+  "w": 1440,
+  "h": 272,
+  "clipped": false
+ },
+ {
+  "id": "components-list--no-search",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-list--no-search.opencode.light.webp",
+  "w": 1440,
+  "h": 272,
+  "clipped": false
+ },
+ {
+  "id": "components-list--no-search",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-list--no-search.opencode.dark.webp",
+  "w": 1440,
+  "h": 272,
+  "clipped": false
+ },
+ {
+  "id": "ui-accordion--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-accordion--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 222,
+  "clipped": false
+ },
+ {
+  "id": "ui-accordion--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-accordion--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 222,
+  "clipped": false
+ },
+ {
+  "id": "ui-accordion--multiple",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-accordion--multiple.opencode.light.webp",
+  "w": 1440,
+  "h": 318,
+  "clipped": false
+ },
+ {
+  "id": "ui-accordion--multiple",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-accordion--multiple.opencode.dark.webp",
+  "w": 1440,
+  "h": 318,
+  "clipped": false
+ },
+ {
+  "id": "ui-accordion--non-collapsible",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-accordion--non-collapsible.opencode.light.webp",
+  "w": 1440,
+  "h": 160,
+  "clipped": false
+ },
+ {
+  "id": "ui-accordion--non-collapsible",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-accordion--non-collapsible.opencode.dark.webp",
+  "w": 1440,
+  "h": 160,
+  "clipped": false
+ },
+ {
+  "id": "components-collapsible--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-collapsible--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 215,
+  "clipped": false
+ },
+ {
+  "id": "components-collapsible--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-collapsible--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 215,
+  "clipped": false
+ },
+ {
+  "id": "components-collapsible--ghost",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-collapsible--ghost.opencode.light.webp",
+  "w": 1440,
+  "h": 144,
+  "clipped": false
+ },
+ {
+  "id": "components-collapsible--ghost",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-collapsible--ghost.opencode.dark.webp",
+  "w": 1440,
+  "h": 144,
+  "clipped": false
+ },
+ {
+  "id": "ui-badge--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-badge--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-badge--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-badge--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-badge--appearances",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-badge--appearances.opencode.light.webp",
+  "w": 1440,
+  "h": 132,
+  "clipped": false
+ },
+ {
+  "id": "ui-badge--appearances",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-badge--appearances.opencode.dark.webp",
+  "w": 1440,
+  "h": 132,
+  "clipped": false
+ },
+ {
+  "id": "ui-badge--subtle",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-badge--subtle.opencode.light.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-badge--subtle",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-badge--subtle.opencode.dark.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-badge--high-contrast",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-badge--high-contrast.opencode.light.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-badge--high-contrast",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-badge--high-contrast.opencode.dark.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-badge--accent",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-badge--accent.opencode.light.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-badge--accent",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-badge--accent.opencode.dark.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-keybind--playground",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-keybind--playground.opencode.light.webp",
+  "w": 1440,
+  "h": 124,
+  "clipped": false
+ },
+ {
+  "id": "ui-keybind--playground",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-keybind--playground.opencode.dark.webp",
+  "w": 1440,
+  "h": 124,
+  "clipped": false
+ },
+ {
+  "id": "ui-keybind--variants",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-keybind--variants.opencode.light.webp",
+  "w": 1440,
+  "h": 124,
+  "clipped": false
+ },
+ {
+  "id": "ui-keybind--variants",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-keybind--variants.opencode.dark.webp",
+  "w": 1440,
+  "h": 124,
+  "clipped": false
+ },
+ {
+  "id": "ui-keybind--multiple-keys",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-keybind--multiple-keys.opencode.light.webp",
+  "w": 1440,
+  "h": 124,
+  "clipped": false
+ },
+ {
+  "id": "ui-keybind--multiple-keys",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-keybind--multiple-keys.opencode.dark.webp",
+  "w": 1440,
+  "h": 124,
+  "clipped": false
+ },
+ {
+  "id": "ui-keybind--all-examples",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-keybind--all-examples.opencode.light.webp",
+  "w": 1440,
+  "h": 209,
+  "clipped": false
+ },
+ {
+  "id": "ui-keybind--all-examples",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-keybind--all-examples.opencode.dark.webp",
+  "w": 1440,
+  "h": 209,
+  "clipped": false
+ },
+ {
+  "id": "components-spinner--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-spinner--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 130,
+  "clipped": false
+ },
+ {
+  "id": "components-spinner--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-spinner--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 130,
+  "clipped": false
+ },
+ {
+  "id": "components-spinner--sizes",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-spinner--sizes.opencode.light.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "components-spinner--sizes",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-spinner--sizes.opencode.dark.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "ui-loader--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-loader--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 126,
+  "clipped": false
+ },
+ {
+  "id": "ui-loader--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-loader--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 126,
+  "clipped": false
+ },
+ {
+  "id": "ui-loader--sizes",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-loader--sizes.opencode.light.webp",
+  "w": 1440,
+  "h": 141,
+  "clipped": false
+ },
+ {
+  "id": "ui-loader--sizes",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-loader--sizes.opencode.dark.webp",
+  "w": 1440,
+  "h": 141,
+  "clipped": false
+ },
+ {
+  "id": "components-progress--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-progress--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 159,
+  "clipped": false
+ },
+ {
+  "id": "components-progress--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-progress--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 159,
+  "clipped": false
+ },
+ {
+  "id": "components-progress--no-label",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-progress--no-label.opencode.light.webp",
+  "w": 1440,
+  "h": 112,
+  "clipped": false
+ },
+ {
+  "id": "components-progress--no-label",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-progress--no-label.opencode.dark.webp",
+  "w": 1440,
+  "h": 112,
+  "clipped": false
+ },
+ {
+  "id": "components-progress--indeterminate",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-progress--indeterminate.opencode.light.webp",
+  "w": 1440,
+  "h": 159,
+  "clipped": false
+ },
+ {
+  "id": "components-progress--indeterminate",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-progress--indeterminate.opencode.dark.webp",
+  "w": 1440,
+  "h": 159,
+  "clipped": false
+ },
+ {
+  "id": "ui-segmented-control--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-segmented-control--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 153,
+  "clipped": false
+ },
+ {
+  "id": "ui-segmented-control--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-segmented-control--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 153,
+  "clipped": false
+ },
+ {
+  "id": "ui-segmented-control--controlled",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-segmented-control--controlled.opencode.light.webp",
+  "w": 1440,
+  "h": 209,
+  "clipped": false
+ },
+ {
+  "id": "ui-segmented-control--controlled",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-segmented-control--controlled.opencode.dark.webp",
+  "w": 1440,
+  "h": 209,
+  "clipped": false
+ },
+ {
+  "id": "rune-keybind--symbols",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-keybind--symbols.opencode.light.webp",
+  "w": 1440,
+  "h": 426,
+  "clipped": false
+ },
+ {
+  "id": "rune-keybind--symbols",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-keybind--symbols.opencode.dark.webp",
+  "w": 1440,
+  "h": 426,
+  "clipped": false
+ },
+ {
+  "id": "rune-switch--sizes",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-switch--sizes.opencode.light.webp",
+  "w": 1440,
+  "h": 464,
+  "clipped": false
+ },
+ {
+  "id": "rune-switch--sizes",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-switch--sizes.opencode.dark.webp",
+  "w": 1440,
+  "h": 464,
+  "clipped": false
+ },
+ {
+  "id": "rune-scroll-view--thumb",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-scroll-view--thumb.opencode.light.webp",
+  "w": 1440,
+  "h": 456,
+  "clipped": false
+ },
+ {
+  "id": "rune-scroll-view--thumb",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-scroll-view--thumb.opencode.dark.webp",
+  "w": 1440,
+  "h": 456,
+  "clipped": false
+ },
+ {
+  "id": "rune-rolling-text--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-rolling-text--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 531,
+  "clipped": false
+ },
+ {
+  "id": "rune-rolling-text--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-rolling-text--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 531,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 1087,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 1087,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--streaming",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--streaming.opencode.light.webp",
+  "w": 1440,
+  "h": 282,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--streaming",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--streaming.opencode.dark.webp",
+  "w": 1440,
+  "h": 282,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--stream-tail",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--stream-tail.opencode.light.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--stream-tail",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--stream-tail.opencode.dark.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--walkthrough",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--walkthrough.opencode.light.webp",
+  "w": 1440,
+  "h": 2200,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--walkthrough",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--walkthrough.opencode.dark.webp",
+  "w": 1440,
+  "h": 2200,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--diagrams",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--diagrams.opencode.light.webp",
+  "w": 1440,
+  "h": 2267,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--diagrams",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--diagrams.opencode.dark.webp",
+  "w": 1440,
+  "h": 2267,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--lenient",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--lenient.opencode.light.webp",
+  "w": 1440,
+  "h": 1780,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--lenient",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--lenient.opencode.dark.webp",
+  "w": 1440,
+  "h": 1780,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-shapes",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--mermaid-shapes.opencode.light.webp",
+  "w": 1440,
+  "h": 2058,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-shapes",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--mermaid-shapes.opencode.dark.webp",
+  "w": 1440,
+  "h": 2058,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-charts",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--mermaid-charts.opencode.light.webp",
+  "w": 1440,
+  "h": 2265,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-charts",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--mermaid-charts.opencode.dark.webp",
+  "w": 1440,
+  "h": 2265,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-maps",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--mermaid-maps.opencode.light.webp",
+  "w": 1440,
+  "h": 2120,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-maps",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--mermaid-maps.opencode.dark.webp",
+  "w": 1440,
+  "h": 2120,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-git",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--mermaid-git.opencode.light.webp",
+  "w": 1440,
+  "h": 2113,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-git",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--mermaid-git.opencode.dark.webp",
+  "w": 1440,
+  "h": 2113,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-data",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--mermaid-data.opencode.light.webp",
+  "w": 1440,
+  "h": 2567,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-data",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--mermaid-data.opencode.dark.webp",
+  "w": 1440,
+  "h": 2567,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-systems",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--mermaid-systems.opencode.light.webp",
+  "w": 1440,
+  "h": 3113,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-systems",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--mermaid-systems.opencode.dark.webp",
+  "w": 1440,
+  "h": 3113,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-flows",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--mermaid-flows.opencode.light.webp",
+  "w": 1440,
+  "h": 2691,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-flows",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--mermaid-flows.opencode.dark.webp",
+  "w": 1440,
+  "h": 2691,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-hover",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--mermaid-hover.opencode.light.webp",
+  "w": 1440,
+  "h": 1028,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-hover",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--mermaid-hover.opencode.dark.webp",
+  "w": 1440,
+  "h": 1028,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-streaming",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--mermaid-streaming.opencode.light.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-streaming",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--mermaid-streaming.opencode.dark.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-plan",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--mermaid-plan.opencode.light.webp",
+  "w": 1440,
+  "h": 963,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-plan",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--mermaid-plan.opencode.dark.webp",
+  "w": 1440,
+  "h": 963,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-plan-zoomed",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--mermaid-plan-zoomed.opencode.light.webp",
+  "w": 1440,
+  "h": 2697,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--mermaid-plan-zoomed",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--mermaid-plan-zoomed.opencode.dark.webp",
+  "w": 1440,
+  "h": 2697,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--table-styles",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--table-styles.opencode.light.webp",
+  "w": 1440,
+  "h": 926,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--table-styles",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--table-styles.opencode.dark.webp",
+  "w": 1440,
+  "h": 926,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--code",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-markdown--code.opencode.light.webp",
+  "w": 1440,
+  "h": 2400,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--code",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-markdown--code.opencode.dark.webp",
+  "w": 1440,
+  "h": 2400,
+  "clipped": false
+ },
+ {
+  "id": "rune-text--selectable-help",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-text--selectable-help.opencode.light.webp",
+  "w": 1440,
+  "h": 309,
+  "clipped": false
+ },
+ {
+  "id": "rune-text--selectable-help",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-text--selectable-help.opencode.dark.webp",
+  "w": 1440,
+  "h": 305,
+  "clipped": false
+ },
+ {
+  "id": "rune-text--truncate-middle",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-text--truncate-middle.opencode.light.webp",
+  "w": 1440,
+  "h": 549,
+  "clipped": false
+ },
+ {
+  "id": "rune-text--truncate-middle",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-text--truncate-middle.opencode.dark.webp",
+  "w": 1440,
+  "h": 549,
+  "clipped": false
+ },
+ {
+  "id": "rune-dialog--fit",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-dialog--fit.opencode.light.webp",
+  "w": 1440,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "rune-dialog--fit",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-dialog--fit.opencode.dark.webp",
+  "w": 1440,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "rune-popup-list--composer",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-popup-list--composer.opencode.light.webp",
+  "w": 1440,
+  "h": 431,
+  "clipped": false
+ },
+ {
+  "id": "rune-popup-list--composer",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-popup-list--composer.opencode.dark.webp",
+  "w": 1440,
+  "h": 415,
+  "clipped": false
+ },
+ {
+  "id": "rune-scroll-bar--basic",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-scroll-bar--basic.opencode.light.webp",
+  "w": 1440,
+  "h": 616,
+  "clipped": false
+ },
+ {
+  "id": "rune-scroll-bar--basic",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-scroll-bar--basic.opencode.dark.webp",
+  "w": 1440,
+  "h": 616,
+  "clipped": false
+ },
+ {
+  "id": "rune-scroll-bar--grow",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-scroll-bar--grow.opencode.light.webp",
+  "w": 1440,
+  "h": 680,
+  "clipped": false
+ },
+ {
+  "id": "rune-scroll-bar--grow",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-scroll-bar--grow.opencode.dark.webp",
+  "w": 1440,
+  "h": 680,
+  "clipped": false
+ },
+ {
+  "id": "components-file-icon--samples",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-file-icon--samples.opencode.light.webp",
+  "w": 1440,
+  "h": 248,
+  "clipped": false
+ },
+ {
+  "id": "components-file-icon--samples",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-file-icon--samples.opencode.dark.webp",
+  "w": 1440,
+  "h": 248,
+  "clipped": false
+ },
+ {
+  "id": "components-file-icon--folder",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "components-file-icon--folder.opencode.light.webp",
+  "w": 1440,
+  "h": 126,
+  "clipped": false
+ },
+ {
+  "id": "components-file-icon--folder",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "components-file-icon--folder.opencode.dark.webp",
+  "w": 1440,
+  "h": 126,
+  "clipped": false
+ },
+ {
+  "id": "ui-icon--gallery",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "ui-icon--gallery.opencode.light.webp",
+  "w": 1440,
+  "h": 657,
+  "clipped": false
+ },
+ {
+  "id": "ui-icon--gallery",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "ui-icon--gallery.opencode.dark.webp",
+  "w": 1440,
+  "h": 657,
+  "clipped": false
+ },
+ {
+  "id": "rune-icon--catalog",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-icon--catalog.opencode.light.webp",
+  "w": 1440,
+  "h": 1791,
+  "clipped": false
+ },
+ {
+  "id": "rune-icon--catalog",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-icon--catalog.opencode.dark.webp",
+  "w": 1440,
+  "h": 1791,
+  "clipped": false
+ },
+ {
+  "id": "rune-file-icon--catalog",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-file-icon--catalog.opencode.light.webp",
+  "w": 1440,
+  "h": 3352,
+  "clipped": false
+ },
+ {
+  "id": "rune-file-icon--catalog",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-file-icon--catalog.opencode.dark.webp",
+  "w": 1440,
+  "h": 3352,
+  "clipped": false
+ },
+ {
+  "id": "rune-tree-icon--catalog",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-tree-icon--catalog.opencode.light.webp",
+  "w": 1440,
+  "h": 648,
+  "clipped": false
+ },
+ {
+  "id": "rune-tree-icon--catalog",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-tree-icon--catalog.opencode.dark.webp",
+  "w": 1440,
+  "h": 648,
+  "clipped": false
+ },
+ {
+  "id": "rune-tree--files",
+  "kit": "opencode",
+  "theme": "light",
+  "file": "rune-tree--files.opencode.light.webp",
+  "w": 1440,
+  "h": 568,
+  "clipped": false
+ },
+ {
+  "id": "rune-tree--files",
+  "kit": "opencode",
+  "theme": "dark",
+  "file": "rune-tree--files.opencode.dark.webp",
+  "w": 1440,
+  "h": 568,
+  "clipped": false
+ },
+ {
+  "id": "ui-dialog--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-dialog--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "ui-dialog--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-dialog--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "ui-button--variants",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-button--variants.neutral.light.webp",
+  "w": 1440,
+  "h": 216,
+  "clipped": false
+ },
+ {
+  "id": "ui-button--variants",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-button--variants.neutral.dark.webp",
+  "w": 1440,
+  "h": 216,
+  "clipped": false
+ },
+ {
+  "id": "ui-button--all-states",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-button--all-states.neutral.light.webp",
+  "w": 1440,
+  "h": 1296,
+  "clipped": false
+ },
+ {
+  "id": "ui-button--all-states",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-button--all-states.neutral.dark.webp",
+  "w": 1440,
+  "h": 1296,
+  "clipped": false
+ },
+ {
+  "id": "ui-icon-button--variants",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-icon-button--variants.neutral.light.webp",
+  "w": 1440,
+  "h": 149,
+  "clipped": false
+ },
+ {
+  "id": "ui-icon-button--variants",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-icon-button--variants.neutral.dark.webp",
+  "w": 1440,
+  "h": 148,
+  "clipped": false
+ },
+ {
+  "id": "ui-icon-button--all-states",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-icon-button--all-states.neutral.light.webp",
+  "w": 1440,
+  "h": 625,
+  "clipped": false
+ },
+ {
+  "id": "ui-icon-button--all-states",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-icon-button--all-states.neutral.dark.webp",
+  "w": 1440,
+  "h": 625,
+  "clipped": false
+ },
+ {
+  "id": "ui-switch--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-switch--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-switch--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-switch--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-switch--appearances",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-switch--appearances.neutral.light.webp",
+  "w": 1440,
+  "h": 184,
+  "clipped": false
+ },
+ {
+  "id": "ui-switch--appearances",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-switch--appearances.neutral.dark.webp",
+  "w": 1440,
+  "h": 184,
+  "clipped": false
+ },
+ {
+  "id": "ui-switch--states",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-switch--states.neutral.light.webp",
+  "w": 1440,
+  "h": 240,
+  "clipped": false
+ },
+ {
+  "id": "ui-switch--states",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-switch--states.neutral.dark.webp",
+  "w": 1440,
+  "h": 240,
+  "clipped": false
+ },
+ {
+  "id": "ui-checkbox--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-checkbox--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 136,
+  "clipped": false
+ },
+ {
+  "id": "ui-checkbox--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-checkbox--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 136,
+  "clipped": false
+ },
+ {
+  "id": "ui-checkbox--states",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-checkbox--states.neutral.light.webp",
+  "w": 1440,
+  "h": 389,
+  "clipped": false
+ },
+ {
+  "id": "ui-checkbox--states",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-checkbox--states.neutral.dark.webp",
+  "w": 1440,
+  "h": 389,
+  "clipped": false
+ },
+ {
+  "id": "ui-radio--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-radio--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 402,
+  "clipped": false
+ },
+ {
+  "id": "ui-radio--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-radio--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 402,
+  "clipped": false
+ },
+ {
+  "id": "ui-radio--states",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-radio--states.neutral.light.webp",
+  "w": 1440,
+  "h": 856,
+  "clipped": false
+ },
+ {
+  "id": "ui-radio--states",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-radio--states.neutral.dark.webp",
+  "w": 1440,
+  "h": 856,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--appearances",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-text-input--appearances.neutral.light.webp",
+  "w": 1440,
+  "h": 365,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--appearances",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-text-input--appearances.neutral.dark.webp",
+  "w": 1440,
+  "h": 364,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--states",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-text-input--states.neutral.light.webp",
+  "w": 1440,
+  "h": 637,
+  "clipped": false
+ },
+ {
+  "id": "ui-text-input--states",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-text-input--states.neutral.dark.webp",
+  "w": 1440,
+  "h": 636,
+  "clipped": false
+ },
+ {
+  "id": "ui-textarea--states",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-textarea--states.neutral.light.webp",
+  "w": 1440,
+  "h": 1061,
+  "clipped": false
+ },
+ {
+  "id": "ui-textarea--states",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-textarea--states.neutral.dark.webp",
+  "w": 1440,
+  "h": 1060,
+  "clipped": false
+ },
+ {
+  "id": "ui-select--grouped",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-select--grouped.neutral.light.webp",
+  "w": 1440,
+  "h": 586,
+  "clipped": false
+ },
+ {
+  "id": "ui-select--grouped",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-select--grouped.neutral.dark.webp",
+  "w": 1440,
+  "h": 580,
+  "clipped": false
+ },
+ {
+  "id": "rune-select--states",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "rune-select--states.neutral.light.webp",
+  "w": 1440,
+  "h": 1146,
+  "clipped": false
+ },
+ {
+  "id": "rune-select--states",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "rune-select--states.neutral.dark.webp",
+  "w": 1440,
+  "h": 1140,
+  "clipped": false
+ },
+ {
+  "id": "components-popover--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "components-popover--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 382,
+  "clipped": false
+ },
+ {
+  "id": "components-popover--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "components-popover--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 378,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-menu--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 424,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-menu--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 418,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--appearances",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-menu--appearances.neutral.light.webp",
+  "w": 1440,
+  "h": 305,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--appearances",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-menu--appearances.neutral.dark.webp",
+  "w": 1440,
+  "h": 301,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--rich",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-menu--rich.neutral.light.webp",
+  "w": 1440,
+  "h": 424,
+  "clipped": false
+ },
+ {
+  "id": "ui-menu--rich",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-menu--rich.neutral.dark.webp",
+  "w": 1440,
+  "h": 418,
+  "clipped": false
+ },
+ {
+  "id": "components-hover-card--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "components-hover-card--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 299,
+  "clipped": false
+ },
+ {
+  "id": "components-hover-card--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "components-hover-card--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 295,
+  "clipped": false
+ },
+ {
+  "id": "ui-toast--all-examples",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-toast--all-examples.neutral.light.webp",
+  "w": 1440,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "ui-toast--all-examples",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-toast--all-examples.neutral.dark.webp",
+  "w": 1440,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "components-list--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "components-list--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 442,
+  "clipped": false
+ },
+ {
+  "id": "components-list--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "components-list--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 442,
+  "clipped": false
+ },
+ {
+  "id": "components-list--grouped",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "components-list--grouped.neutral.light.webp",
+  "w": 1440,
+  "h": 548,
+  "clipped": false
+ },
+ {
+  "id": "components-list--grouped",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "components-list--grouped.neutral.dark.webp",
+  "w": 1440,
+  "h": 548,
+  "clipped": false
+ },
+ {
+  "id": "ui-accordion--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-accordion--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 222,
+  "clipped": false
+ },
+ {
+  "id": "ui-accordion--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-accordion--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 222,
+  "clipped": false
+ },
+ {
+  "id": "components-collapsible--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "components-collapsible--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 215,
+  "clipped": false
+ },
+ {
+  "id": "components-collapsible--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "components-collapsible--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 215,
+  "clipped": false
+ },
+ {
+  "id": "ui-badge--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-badge--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-badge--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-badge--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 128,
+  "clipped": false
+ },
+ {
+  "id": "ui-badge--appearances",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-badge--appearances.neutral.light.webp",
+  "w": 1440,
+  "h": 132,
+  "clipped": false
+ },
+ {
+  "id": "ui-badge--appearances",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-badge--appearances.neutral.dark.webp",
+  "w": 1440,
+  "h": 132,
+  "clipped": false
+ },
+ {
+  "id": "ui-keybind--variants",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-keybind--variants.neutral.light.webp",
+  "w": 1440,
+  "h": 124,
+  "clipped": false
+ },
+ {
+  "id": "ui-keybind--variants",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-keybind--variants.neutral.dark.webp",
+  "w": 1440,
+  "h": 124,
+  "clipped": false
+ },
+ {
+  "id": "ui-keybind--all-examples",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-keybind--all-examples.neutral.light.webp",
+  "w": 1440,
+  "h": 209,
+  "clipped": false
+ },
+ {
+  "id": "ui-keybind--all-examples",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-keybind--all-examples.neutral.dark.webp",
+  "w": 1440,
+  "h": 209,
+  "clipped": false
+ },
+ {
+  "id": "components-spinner--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "components-spinner--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 130,
+  "clipped": false
+ },
+ {
+  "id": "components-spinner--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "components-spinner--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 130,
+  "clipped": false
+ },
+ {
+  "id": "ui-loader--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-loader--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 126,
+  "clipped": false
+ },
+ {
+  "id": "ui-loader--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-loader--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 126,
+  "clipped": false
+ },
+ {
+  "id": "components-progress--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "components-progress--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 159,
+  "clipped": false
+ },
+ {
+  "id": "components-progress--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "components-progress--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 159,
+  "clipped": false
+ },
+ {
+  "id": "ui-segmented-control--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "ui-segmented-control--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 153,
+  "clipped": false
+ },
+ {
+  "id": "ui-segmented-control--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "ui-segmented-control--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 153,
+  "clipped": false
+ },
+ {
+  "id": "rune-rolling-text--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "rune-rolling-text--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 531,
+  "clipped": false
+ },
+ {
+  "id": "rune-rolling-text--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "rune-rolling-text--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 531,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "rune-markdown--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 1087,
+  "clipped": false
+ },
+ {
+  "id": "rune-markdown--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "rune-markdown--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 1087,
+  "clipped": false
+ },
+ {
+  "id": "rune-scroll-bar--basic",
+  "kit": "neutral",
+  "theme": "light",
+  "file": "rune-scroll-bar--basic.neutral.light.webp",
+  "w": 1440,
+  "h": 616,
+  "clipped": false
+ },
+ {
+  "id": "rune-scroll-bar--basic",
+  "kit": "neutral",
+  "theme": "dark",
+  "file": "rune-scroll-bar--basic.neutral.dark.webp",
+  "w": 1440,
+  "h": 616,
+  "clipped": false
+ },
+ {
+  "id": "example-diff--split",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-diff--split.opencode.light.webp",
+  "w": 1800,
+  "h": 1240,
+  "clipped": false
+ },
+ {
+  "id": "example-diff--split",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-diff--split.opencode.dark.webp",
+  "w": 1800,
+  "h": 1240,
+  "clipped": false
+ },
+ {
+  "id": "example-diff--scrolled",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-diff--scrolled.opencode.light.webp",
+  "w": 1800,
+  "h": 1240,
+  "clipped": false
+ },
+ {
+  "id": "example-diff--scrolled",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-diff--scrolled.opencode.dark.webp",
+  "w": 1800,
+  "h": 1240,
+  "clipped": false
+ },
+ {
+  "id": "example-diff--folded",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-diff--folded.opencode.light.webp",
+  "w": 1800,
+  "h": 1240,
+  "clipped": false
+ },
+ {
+  "id": "example-diff--folded",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-diff--folded.opencode.dark.webp",
+  "w": 1800,
+  "h": 1240,
+  "clipped": false
+ },
+ {
+  "id": "example-diff--long",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-diff--long.opencode.light.webp",
+  "w": 1800,
+  "h": 1240,
+  "clipped": false
+ },
+ {
+  "id": "example-diff--long",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-diff--long.opencode.dark.webp",
+  "w": 1800,
+  "h": 1240,
+  "clipped": false
+ },
+ {
+  "id": "example-diff--line-info",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-diff--line-info.opencode.light.webp",
+  "w": 1800,
+  "h": 1240,
+  "clipped": false
+ },
+ {
+  "id": "example-diff--line-info",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-diff--line-info.opencode.dark.webp",
+  "w": 1800,
+  "h": 1240,
+  "clipped": false
+ },
+ {
+  "id": "example-diff--added",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-diff--added.opencode.light.webp",
+  "w": 1800,
+  "h": 1240,
+  "clipped": false
+ },
+ {
+  "id": "example-diff--added",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-diff--added.opencode.dark.webp",
+  "w": 1800,
+  "h": 1240,
+  "clipped": false
+ },
+ {
+  "id": "example-table",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-table.opencode.light.webp",
+  "w": 1520,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "example-table",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-table.opencode.dark.webp",
+  "w": 1520,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "example-tree",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-tree.opencode.light.webp",
+  "w": 1440,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "example-tree",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-tree.opencode.dark.webp",
+  "w": 1440,
+  "h": 960,
+  "clipped": false
+ },
+ {
+  "id": "example-shell",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-shell.opencode.light.webp",
+  "w": 2080,
+  "h": 1280,
+  "clipped": false
+ },
+ {
+  "id": "example-shell",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-shell.opencode.dark.webp",
+  "w": 2080,
+  "h": 1280,
+  "clipped": false
+ },
+ {
+  "id": "example-tab_strip--tabs",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-tab_strip--tabs.opencode.light.webp",
+  "w": 2560,
+  "h": 1600,
+  "clipped": false
+ },
+ {
+  "id": "example-tab_strip--tabs",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-tab_strip--tabs.opencode.dark.webp",
+  "w": 2560,
+  "h": 1600,
+  "clipped": false
+ },
+ {
+  "id": "example-tab_strip--overflow",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-tab_strip--overflow.opencode.light.webp",
+  "w": 2560,
+  "h": 1600,
+  "clipped": false
+ },
+ {
+  "id": "example-tab_strip--overflow",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-tab_strip--overflow.opencode.dark.webp",
+  "w": 2560,
+  "h": 1600,
+  "clipped": false
+ },
+ {
+  "id": "example-tab_strip--single",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-tab_strip--single.opencode.light.webp",
+  "w": 2560,
+  "h": 1600,
+  "clipped": false
+ },
+ {
+  "id": "example-tab_strip--single",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-tab_strip--single.opencode.dark.webp",
+  "w": 2560,
+  "h": 1600,
+  "clipped": false
+ },
+ {
+  "id": "example-shortcut_recorder",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-shortcut_recorder.opencode.light.webp",
+  "w": 720,
+  "h": 360,
+  "clipped": false
+ },
+ {
+  "id": "example-shortcut_recorder",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-shortcut_recorder.opencode.dark.webp",
+  "w": 720,
+  "h": 360,
+  "clipped": false
+ },
+ {
+  "id": "example-rich_editor",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-rich_editor.opencode.light.webp",
+  "w": 1120,
+  "h": 760,
+  "clipped": false
+ },
+ {
+  "id": "example-rich_editor",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-rich_editor.opencode.dark.webp",
+  "w": 1120,
+  "h": 760,
+  "clipped": false
+ },
+ {
+  "id": "example-glyphs",
+  "kit": "example",
+  "theme": "light",
+  "file": "example-glyphs.opencode.light.webp",
+  "w": 2000,
+  "h": 1080,
+  "clipped": false
+ },
+ {
+  "id": "example-glyphs",
+  "kit": "example",
+  "theme": "dark",
+  "file": "example-glyphs.opencode.dark.webp",
+  "w": 2000,
+  "h": 1080,
+  "clipped": false
+ }
+]
